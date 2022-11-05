@@ -9,6 +9,7 @@
  */
 
 #include <netinet/in.h>
+#include <arpa/inet.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -16,9 +17,9 @@
 #include <unistd.h>
 #include <asm/fcntl.h>
 #include <bits/in_addr.h>
-#include <sys/endian.h>
 #include "response.h"
 #include "mime.h"
+#include "utils.h"
 
 
 
@@ -91,12 +92,24 @@ int main(int argc, char *argv[]) {
     // if none of them found, send 404
     char *req = strtok(buffer, " ");
     char *path = strtok(NULL, " ");
-    char *file = path + 1;
+    char *file = malloc(sizeof(path) + 100);
+    strcpy(file, path + 1);
 
-    if (strcmp(path, "/") == 0) {
-      file = "index.html";
+    if(isFile(file) == 0 && !strEndsWith(path, "/")){
+        strcat(path, "/");
+
+        char* r = (char*)malloc(50 + strlen(path));
+        sprintf(r, "HTTP/1.1 301 Moved Permanently\n\rLocation: %s\n\r", path);
+        printf("%s\n", r);
+        send(new_socket, r, 0, strlen(r));
+        free(r);
+        close(new_socket);
+        continue;
     }
 
+    if (strEndsWith(path, "/")) {
+        sprintf(file, "%sindex.html", path + 1);
+    }
 
     if (access(file, F_OK) != 0) {
       printf("GET %s - Not Found\n", path);
@@ -130,6 +143,7 @@ int main(int argc, char *argv[]) {
       HTTPResponse(new_socket, getMimeType(file), fd);
     }
 
+    free(file);
     close(new_socket);
   }
   return 0;
