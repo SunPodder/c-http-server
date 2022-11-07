@@ -20,3 +20,11 @@ int isFile(char *path){
     return S_ISREG(path_stat.st_mode);
 }
 
+
+char *getFileExtension(char *filename) {
+    char *dot = strrchr(filename, '.');
+    if(!dot || dot == filename) return "";
+    return dot + 1;
+}
+
+
