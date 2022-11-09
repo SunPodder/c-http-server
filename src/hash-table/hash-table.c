@@ -1,6 +1,6 @@
-#include <limits.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 #include "hash-table.h"
 
 
@@ -89,7 +89,7 @@ void ht_set(ht_t *hashtable, char *key, char *value) {
 }
 
 
-char *ht_get(ht_t *hashtable, const char *key) {
+char* ht_get(ht_t *hashtable, char *key) {
     unsigned int slot = hash(key, sizeof(hashtable->entries)/sizeof(entry_t*));
 
     // try to find a valid slot

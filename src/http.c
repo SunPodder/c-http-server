@@ -18,7 +18,7 @@
 #include <asm/fcntl.h>
 #include <bits/in_addr.h>
 #include "response.h"
-#include "mime.h"
+#include "mime/mime.h"
 #include "utils.h"
 
 

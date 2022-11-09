@@ -1,7 +1,6 @@
 #include <sys/stat.h>
 #include <linux/stat.h>
 #include <string.h>
-#include <stdio.h>
 #include "utils.h"
 
 int strEndsWith(char *str, char *suffix){
@@ -19,12 +18,3 @@ int isFile(char *path){
     stat(path, &path_stat);
     return S_ISREG(path_stat.st_mode);
 }
-
-
-char *getFileExtension(char *filename) {
-    char *dot = strrchr(filename, '.');
-    if(!dot || dot == filename) return "";
-    return dot + 1;
-}
-
-

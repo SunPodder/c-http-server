@@ -1,12 +1,16 @@
 #include <string.h>
 #include "mime.h"
-#include "utils.h"
-#include "hash-table.h"
+#include "../hash-table/hash-table.h"
 
 ht_t* table;
 
+static char *getFileExtension(char *filename) {
+    char *dot = strrchr(filename, '.');
+    if(!dot || dot == filename) return "";
+    return dot + 1;
+}
 
-void init_mime_table(){
+static void init_mime_table(){
     table = ht_create(10);
 
     ht_set(table, "html", "text/html");
@@ -21,7 +25,6 @@ void init_mime_table(){
 }
 
 char* getMimeType(char *filename){
-    
     char *extension = getFileExtension(filename);
     char* type = ht_get(table, extension);
 
@@ -31,4 +34,5 @@ char* getMimeType(char *filename){
     return type;
 }
 
-
+#define init_mime_table call function
+#define getFileExtension call function
