@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if ! [[ $(command -v include-what-you-use && command -v cppcheck) ]]; then
+    echo "Dependencies not found!\nExiting..."
+    exit
+fi
+
+for file in $(find ./src -name *.c); do
+    include-what-you-use $file
+    cppcheck $file
+done
