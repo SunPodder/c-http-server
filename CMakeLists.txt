@@ -13,3 +13,4 @@ cmake_policy(SET CMP0079 NEW)
 target_link_libraries(http PUBLIC MIME)
 target_link_libraries(http PUBLIC HashTable)
 
+install(TARGETS http DESTINATION bin)

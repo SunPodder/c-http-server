@@ -1,5 +1,0 @@
-#!/bin/bash
-
-for file in $(find ./src -name *.c); do
-    include-what-you-use $file
-done

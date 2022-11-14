@@ -123,14 +123,14 @@ int main(int argc, char *argv[]) {
       } else {
 
         send(new_socket, HTTP404, strlen(HTTP404), 0);
-        char* res = malloc(sizeof(path) + 50);
-        sprintf(res,
-                "<html>"
-                "<head><title>Error 404: File not found</title></head>"
-                "<body>"
-                "<pre style='font-size: 400%%;'><code>%s</code></pre><h1>No such file or directory</h1>"
-                "</body></html>",
-                path);
+        char* s =  "<html>"
+                   "<head><title>Error 404: File not found</title></head>"
+                   "<body>"
+                   "<pre style='font-size: 400%%;'><code>%s</code></pre><h1>No such file or directory</h1>"
+                   "</body></html>";
+
+        char* res = (char*)malloc(sizeof(path) + strlen(s));
+        sprintf(res, s, path);
         HTTPRaw(new_socket, "text/html", res);
         free(res);
       }
