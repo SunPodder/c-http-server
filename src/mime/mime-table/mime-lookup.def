@@ -1,0 +1,2814 @@
+/* ANSI-C code produced by gperf version 3.1 */
+/* Command-line: gperf -CD -t mime-lookup.gperf  */
+/* Computed positions: -k'1-4,6,$' */
+
+#include <stdlib.h>
+
+#if !((' ' == 32) && ('!' == 33) && ('"' == 34) && ('#' == 35) \
+      && ('%' == 37) && ('&' == 38) && ('\'' == 39) && ('(' == 40) \
+      && (')' == 41) && ('*' == 42) && ('+' == 43) && (',' == 44) \
+      && ('-' == 45) && ('.' == 46) && ('/' == 47) && ('0' == 48) \
+      && ('1' == 49) && ('2' == 50) && ('3' == 51) && ('4' == 52) \
+      && ('5' == 53) && ('6' == 54) && ('7' == 55) && ('8' == 56) \
+      && ('9' == 57) && (':' == 58) && (';' == 59) && ('<' == 60) \
+      && ('=' == 61) && ('>' == 62) && ('?' == 63) && ('A' == 65) \
+      && ('B' == 66) && ('C' == 67) && ('D' == 68) && ('E' == 69) \
+      && ('F' == 70) && ('G' == 71) && ('H' == 72) && ('I' == 73) \
+      && ('J' == 74) && ('K' == 75) && ('L' == 76) && ('M' == 77) \
+      && ('N' == 78) && ('O' == 79) && ('P' == 80) && ('Q' == 81) \
+      && ('R' == 82) && ('S' == 83) && ('T' == 84) && ('U' == 85) \
+      && ('V' == 86) && ('W' == 87) && ('X' == 88) && ('Y' == 89) \
+      && ('Z' == 90) && ('[' == 91) && ('\\' == 92) && (']' == 93) \
+      && ('^' == 94) && ('_' == 95) && ('a' == 97) && ('b' == 98) \
+      && ('c' == 99) && ('d' == 100) && ('e' == 101) && ('f' == 102) \
+      && ('g' == 103) && ('h' == 104) && ('i' == 105) && ('j' == 106) \
+      && ('k' == 107) && ('l' == 108) && ('m' == 109) && ('n' == 110) \
+      && ('o' == 111) && ('p' == 112) && ('q' == 113) && ('r' == 114) \
+      && ('s' == 115) && ('t' == 116) && ('u' == 117) && ('v' == 118) \
+      && ('w' == 119) && ('x' == 120) && ('y' == 121) && ('z' == 122) \
+      && ('{' == 123) && ('|' == 124) && ('}' == 125) && ('~' == 126))
+/* The character set is not based on ISO-646.  */
+#error "gperf generated tables don't work with this execution character set. Please report a bug to <bug-gperf@gnu.org>."
+#endif
+
+#line 1 "mime-lookup.gperf"
+struct file { char* name; char* mime; };
+
+#define TOTAL_KEYWORDS 985
+#define MIN_WORD_LENGTH 1
+#define MAX_WORD_LENGTH 11
+#define MIN_HASH_VALUE 1
+#define MAX_HASH_VALUE 4819
+/* maximum key range = 4819, duplicates = 2 */
+
+#ifdef __GNUC__
+__inline
+#else
+#ifdef __cplusplus
+inline
+#endif
+#endif
+static unsigned int
+hash (register const char *str, register size_t len)
+{
+  static const unsigned short asso_values[] =
+    {
+      4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820,
+      4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820,
+      4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820,
+      4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820,
+      4820, 4820, 4820, 4820, 4820,    5, 4820, 4820,   25,  165,
+       425,  510,  190,   10,    5,   25,   10,   20, 4820, 4820,
+      4820, 4820, 4820, 4820,    5, 4820, 4820, 4820,  410,   65,
+       540,   11,   15,    0,   45,    5,    0, 4820, 4820, 4820,
+      4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820,
+      4820, 4820, 4820, 4820, 4820,   40, 4820,  271,  701,   45,
+        80,  671,  110,  806,  433,  675,  666, 1012,  440,    5,
+       627,  875,   55,  775,  680,    0,   15,  401,  210,  300,
+        40, 1649,  457,   77,  146,  520,   43,   12,  890,  727,
+       267,  570,  110, 1514,  705,  516,    1,  746,  313, 1969,
+        35,  320, 4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820,
+      4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820,
+      4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820,
+      4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820,
+      4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820,
+      4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820,
+      4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820,
+      4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820,
+      4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820,
+      4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820,
+      4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820,
+      4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820,
+      4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820, 4820,
+      4820, 4820, 4820, 4820, 4820
+    };
+  register unsigned int hval = len;
+
+  switch (hval)
+    {
+      default:
+        hval += asso_values[(unsigned char)str[5]];
+      /*FALLTHROUGH*/
+      case 5:
+      case 4:
+        hval += asso_values[(unsigned char)str[3]];
+      /*FALLTHROUGH*/
+      case 3:
+        hval += asso_values[(unsigned char)str[2]];
+      /*FALLTHROUGH*/
+      case 2:
+        hval += asso_values[(unsigned char)str[1]+19];
+      /*FALLTHROUGH*/
+      case 1:
+        hval += asso_values[(unsigned char)str[0]];
+        break;
+    }
+  return hval + asso_values[(unsigned char)str[len - 1]];
+}
+
+const struct file *
+in_word_set (register const char *str, register size_t len)
+{
+  static const struct file wordlist[] =
+    {
+#line 908 "mime-lookup.gperf"
+      {"s", "text/x-asm"},
+#line 506 "mime-lookup.gperf"
+      {"sus", "application/vnd.sus-calendar"},
+#line 395 "mime-lookup.gperf"
+      {"mus", "application/vnd.musician"},
+#line 884 "mime-lookup.gperf"
+      {"t", "text/troff"},
+#line 223 "mime-lookup.gperf"
+      {"slt", "application/vnd.epson.salt"},
+#line 977 "mime-lookup.gperf"
+      {"mks", "video/x-matroska"},
+#line 359 "mime-lookup.gperf"
+      {"xls", "application/vnd.ms-excel"},
+#line 326 "mime-lookup.gperf"
+      {"skm", "application/vnd.koan"},
+#line 53 "mime-lookup.gperf"
+      {"mets", "application/mets+xml"},
+#line 360 "mime-lookup.gperf"
+      {"xlm", "application/vnd.ms-excel"},
+#line 367 "mime-lookup.gperf"
+      {"xlsm", "application/vnd.ms-excel.sheet.macroenabled.12"},
+#line 98 "mime-lookup.gperf"
+      {"pls", "application/pls+xml"},
+#line 92 "mime-lookup.gperf"
+      {"p8", "application/pkcs8"},
+#line 925 "mime-lookup.gperf"
+      {"pas", "text/x-pascal"},
+#line 325 "mime-lookup.gperf"
+      {"skt", "application/vnd.koan"},
+#line 368 "mime-lookup.gperf"
+      {"xltm", "application/vnd.ms-excel.template.macroenabled.12"},
+#line 363 "mime-lookup.gperf"
+      {"xlt", "application/vnd.ms-excel"},
+#line 910 "mime-lookup.gperf"
+      {"c", "text/x-c"},
+#line 374 "mime-lookup.gperf"
+      {"cat", "application/vnd.ms-pki.seccat"},
+#line 91 "mime-lookup.gperf"
+      {"p7s", "application/pkcs7-signature"},
+#line 42 "mime-lookup.gperf"
+      {"mads", "application/mads+xml"},
+#line 381 "mime-lookup.gperf"
+      {"sldm", "application/vnd.ms-powerpoint.slide.macroenabled.12"},
+#line 924 "mime-lookup.gperf"
+      {"p", "text/x-pascal"},
+#line 89 "mime-lookup.gperf"
+      {"p7m", "application/pkcs7-mime"},
+#line 507 "mime-lookup.gperf"
+      {"susp", "application/vnd.sus-calendar"},
+#line 873 "mime-lookup.gperf"
+      {"text", "text/plain"},
+#line 211 "mime-lookup.gperf"
+      {"mlp", "application/vnd.dolby.mlp"},
+#line 370 "mime-lookup.gperf"
+      {"chm", "application/vnd.ms-htmlhelp"},
+#line 435 "mime-lookup.gperf"
+      {"xlsx", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"},
+#line 685 "mime-lookup.gperf"
+      {"tex", "application/x-tex"},
+#line 362 "mime-lookup.gperf"
+      {"xlc", "application/vnd.ms-excel"},
+#line 509 "mime-lookup.gperf"
+      {"sis", "application/vnd.symbian.install"},
+#line 710 "mime-lookup.gperf"
+      {"xht", "application/xhtml+xml"},
+#line 436 "mime-lookup.gperf"
+      {"xltx", "application/vnd.openxmlformats-officedocument.spreadsheetml.template"},
+#line 323 "mime-lookup.gperf"
+      {"skp", "application/vnd.koan"},
+#line 352 "mime-lookup.gperf"
+      {"plc", "application/vnd.mobius.plc"},
+#line 920 "mime-lookup.gperf"
+      {"f90", "text/x-fortran"},
+#line 674 "mime-lookup.gperf"
+      {"xap", "application/x-silverlight-app"},
+#line 180 "mime-lookup.gperf"
+      {"c4p", "application/vnd.clonk.c4group"},
+#line 643 "mime-lookup.gperf"
+      {"clp", "application/x-msclip"},
+#line 516 "mime-lookup.gperf"
+      {"cap", "application/vnd.tcpdump.pcap"},
+#line 432 "mime-lookup.gperf"
+      {"sldx", "application/vnd.openxmlformats-officedocument.presentationml.slide"},
+#line 676 "mime-lookup.gperf"
+      {"sit", "application/x-stuffit"},
+#line 373 "mime-lookup.gperf"
+      {"thmx", "application/vnd.ms-officetheme"},
+#line 90 "mime-lookup.gperf"
+      {"p7c", "application/pkcs7-mime"},
+#line 70 "mime-lookup.gperf"
+      {"dump", "application/octet-stream"},
+#line 901 "mime-lookup.gperf"
+      {"flx", "text/vnd.fmi.flexstor"},
+#line 324 "mime-lookup.gperf"
+      {"skd", "application/vnd.koan"},
+#line 919 "mime-lookup.gperf"
+      {"f77", "text/x-fortran"},
+#line 473 "mime-lookup.gperf"
+      {"semd", "application/vnd.semd"},
+#line 827 "mime-lookup.gperf"
+      {"fh5", "image/x-freehand"},
+#line 118 "mime-lookup.gperf"
+      {"scs", "application/scvp-cv-response"},
+#line 178 "mime-lookup.gperf"
+      {"c4d", "application/vnd.clonk.c4group"},
+#line 917 "mime-lookup.gperf"
+      {"f", "text/x-fortran"},
+#line 336 "mime-lookup.gperf"
+      {"scm", "application/vnd.lotus-screencam"},
+#line 348 "mime-lookup.gperf"
+      {"dis", "application/vnd.mobius.dis"},
+#line 510 "mime-lookup.gperf"
+      {"sisx", "application/vnd.symbian.install"},
+#line 550 "mime-lookup.gperf"
+      {"saf", "application/vnd.yamaha.smaf-audio"},
+#line 828 "mime-lookup.gperf"
+      {"fh7", "image/x-freehand"},
+#line 677 "mime-lookup.gperf"
+      {"sitx", "application/x-stuffitx"},
+#line 287 "mime-lookup.gperf"
+      {"sc", "application/vnd.ibm.secure-container"},
+#line 66 "mime-lookup.gperf"
+      {"dist", "application/octet-stream"},
+#line 474 "mime-lookup.gperf"
+      {"semf", "application/vnd.semf"},
+#line 695 "mime-lookup.gperf"
+      {"xlf", "application/x-xliff+xml"},
+#line 179 "mime-lookup.gperf"
+      {"c4f", "application/vnd.clonk.c4group"},
+#line 825 "mime-lookup.gperf"
+      {"fhc", "image/x-freehand"},
+#line 762 "mime-lookup.gperf"
+      {"caf", "audio/x-caf"},
+#line 597 "mime-lookup.gperf"
+      {"cct", "application/x-director"},
+#line 570 "mime-lookup.gperf"
+      {"aas", "application/x-authorware-seg"},
+#line 450 "mime-lookup.gperf"
+      {"plf", "application/vnd.pocketlearn"},
+#line 45 "mime-lookup.gperf"
+      {"ma", "application/mathematica"},
+#line 832 "mime-lookup.gperf"
+      {"pic", "image/x-pict"},
+#line 833 "mime-lookup.gperf"
+      {"pct", "image/x-pict"},
+#line 569 "mime-lookup.gperf"
+      {"aam", "application/x-authorware-map"},
+#line 124 "mime-lookup.gperf"
+      {"shf", "application/shf+xml"},
+#line 911 "mime-lookup.gperf"
+      {"cc", "text/x-c"},
+#line 830 "mime-lookup.gperf"
+      {"sid", "image/x-mrsid-image"},
+#line 728 "mime-lookup.gperf"
+      {"mid", "audio/midi"},
+#line 347 "mime-lookup.gperf"
+      {"daf", "application/vnd.mobius.daf"},
+#line 916 "mime-lookup.gperf"
+      {"dic", "text/x-c"},
+#line 302 "mime-lookup.gperf"
+      {"fcs", "application/vnd.isac.fcs"},
+#line 646 "mime-lookup.gperf"
+      {"com", "application/x-msdownload"},
+#line 35 "mime-lookup.gperf"
+      {"class", "application/java-vm"},
+#line 365 "mime-lookup.gperf"
+      {"xlam", "application/vnd.ms-excel.addin.macroenabled.12"},
+#line 875 "mime-lookup.gperf"
+      {"def", "text/plain"},
+#line 389 "mime-lookup.gperf"
+      {"wks", "application/vnd.ms-works"},
+#line 831 "mime-lookup.gperf"
+      {"pcx", "image/x-pcx"},
+#line 383 "mime-lookup.gperf"
+      {"potm", "application/vnd.ms-powerpoint.template.macroenabled.12"},
+#line 513 "mime-lookup.gperf"
+      {"xdm", "application/vnd.syncml.dm+xml"},
+#line 378 "mime-lookup.gperf"
+      {"pot", "application/vnd.ms-powerpoint"},
+#line 54 "mime-lookup.gperf"
+      {"mods", "application/mods+xml"},
+#line 533 "mime-lookup.gperf"
+      {"vis", "application/vnd.visionary"},
+#line 658 "mime-lookup.gperf"
+      {"scd", "application/x-msschedule"},
+#line 346 "mime-lookup.gperf"
+      {"mif", "application/vnd.mif"},
+#line 387 "mime-lookup.gperf"
+      {"dotm", "application/vnd.ms-word.template.macroenabled.12"},
+#line 339 "mime-lookup.gperf"
+      {"mcd", "application/vnd.mcd"},
+#line 758 "mime-lookup.gperf"
+      {"aac", "audio/x-aac"},
+#line 59 "mime-lookup.gperf"
+      {"dot", "application/msword"},
+#line 799 "mime-lookup.gperf"
+      {"tif", "image/tiff"},
+#line 20 "mime-lookup.gperf"
+      {"xdssc", "application/dssc+xml"},
+#line 487 "mime-lookup.gperf"
+      {"sdc", "application/vnd.stardivision.calc"},
+#line 766 "mime-lookup.gperf"
+      {"wax", "audio/x-ms-wax"},
+#line 55 "mime-lookup.gperf"
+      {"m21", "application/mp21"},
+#line 386 "mime-lookup.gperf"
+      {"docm", "application/vnd.ms-word.document.macroenabled.12"},
+#line 819 "mime-lookup.gperf"
+      {"xif", "image/vnd.xiff"},
+#line 480 "mime-lookup.gperf"
+      {"twds", "application/vnd.simtech-mindmapper"},
+#line 121 "mime-lookup.gperf"
+      {"sdp", "application/sdp"},
+#line 774 "mime-lookup.gperf"
+      {"cif", "chemical/x-cif"},
+#line 714 "mime-lookup.gperf"
+      {"xop", "application/xop+xml"},
+#line 434 "mime-lookup.gperf"
+      {"potx", "application/vnd.openxmlformats-officedocument.presentationml.template"},
+#line 929 "mime-lookup.gperf"
+      {"vcs", "text/x-vcalendar"},
+#line 168 "mime-lookup.gperf"
+      {"aep", "application/vnd.audiograph"},
+#line 585 "mime-lookup.gperf"
+      {"chat", "application/x-chat"},
+#line 773 "mime-lookup.gperf"
+      {"cdx", "chemical/x-cdx"},
+#line 250 "mime-lookup.gperf"
+      {"fzs", "application/vnd.fuzzysheet"},
+#line 149 "mime-lookup.gperf"
+      {"fcdt", "application/vnd.adobe.formscentral.fcdt"},
+#line 974 "mime-lookup.gperf"
+      {"m4v", "video/x-m4v"},
+#line 58 "mime-lookup.gperf"
+      {"doc", "application/msword"},
+#line 438 "mime-lookup.gperf"
+      {"dotx", "application/vnd.openxmlformats-officedocument.wordprocessingml.template"},
+#line 16 "mime-lookup.gperf"
+      {"cu", "application/cu-seeme"},
+#line 215 "mime-lookup.gperf"
+      {"ait", "application/vnd.dvb.ait"},
+#line 152 "mime-lookup.gperf"
+      {"xdp", "application/vnd.adobe.xdp+xml"},
+#line 840 "mime-lookup.gperf"
+      {"xbm", "image/x-xbitmap"},
+#line 489 "mime-lookup.gperf"
+      {"sdd", "application/vnd.stardivision.impress"},
+#line 703 "mime-lookup.gperf"
+      {"z6", "application/x-zmachine"},
+#line 835 "mime-lookup.gperf"
+      {"pbm", "image/x-portable-bitmap"},
+#line 882 "mime-lookup.gperf"
+      {"sgm", "text/sgml"},
+#line 975 "mime-lookup.gperf"
+      {"mkv", "video/x-matroska"},
+#line 705 "mime-lookup.gperf"
+      {"z8", "application/x-zmachine"},
+#line 466 "mime-lookup.gperf"
+      {"cod", "application/vnd.rim.cod"},
+#line 437 "mime-lookup.gperf"
+      {"docx", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"},
+#line 602 "mime-lookup.gperf"
+      {"wad", "application/x-doom"},
+#line 580 "mime-lookup.gperf"
+      {"cbt", "application/x-cbr"},
+#line 274 "mime-lookup.gperf"
+      {"les", "application/vnd.hhe.lesson-player"},
+#line 702 "mime-lookup.gperf"
+      {"z5", "application/x-zmachine"},
+#line 763 "mime-lookup.gperf"
+      {"flac", "audio/x-flac"},
+#line 612 "mime-lookup.gperf"
+      {"pcf", "application/x-font-pcf"},
+#line 479 "mime-lookup.gperf"
+      {"twd", "application/vnd.simtech-mindmapper"},
+#line 948 "mime-lookup.gperf"
+      {"m2v", "video/mpeg"},
+#line 798 "mime-lookup.gperf"
+      {"tiff", "image/tiff"},
+#line 621 "mime-lookup.gperf"
+      {"ulx", "application/x-glulx"},
+#line 582 "mime-lookup.gperf"
+      {"cb7", "application/x-cbr"},
+#line 528 "mime-lookup.gperf"
+      {"vcx", "application/vnd.vcx"},
+#line 671 "mime-lookup.gperf"
+      {"sh", "application/x-sh"},
+#line 966 "mime-lookup.gperf"
+      {"pyv", "video/vnd.ms-playready.media.pyv"},
+#line 810 "mime-lookup.gperf"
+      {"fbs", "image/vnd.fastbidsheet"},
+#line 785 "mime-lookup.gperf"
+      {"cgm", "image/cgm"},
+#line 842 "mime-lookup.gperf"
+      {"xwd", "image/x-xwindowdump"},
+#line 88 "mime-lookup.gperf"
+      {"p10", "application/pkcs10"},
+#line 390 "mime-lookup.gperf"
+      {"wcm", "application/vnd.ms-works"},
+#line 854 "mime-lookup.gperf"
+      {"mts", "model/vnd.mts"},
+#line 836 "mime-lookup.gperf"
+      {"pgm", "image/x-portable-graymap"},
+#line 52 "mime-lookup.gperf"
+      {"meta4", "application/metalink4+xml"},
+#line 93 "mime-lookup.gperf"
+      {"ac", "application/pkix-attr-cert"},
+#line 704 "mime-lookup.gperf"
+      {"z7", "application/x-zmachine"},
+#line 470 "mime-lookup.gperf"
+      {"st", "application/vnd.sailingtracker.track"},
+#line 673 "mime-lookup.gperf"
+      {"swf", "application/x-shockwave-flash"},
+#line 342 "mime-lookup.gperf"
+      {"mwf", "application/vnd.mfer"},
+#line 247 "mime-lookup.gperf"
+      {"ddd", "application/vnd.fujixerox.ddd"},
+#line 971 "mime-lookup.gperf"
+      {"f4v", "video/x-f4v"},
+#line 973 "mime-lookup.gperf"
+      {"flv", "video/x-flv"},
+#line 340 "mime-lookup.gperf"
+      {"mc1", "application/vnd.medcalcdata"},
+#line 743 "mime-lookup.gperf"
+      {"s3m", "audio/s3m"},
+#line 558 "mime-lookup.gperf"
+      {"hlp", "application/winhlp"},
+#line 568 "mime-lookup.gperf"
+      {"vox", "application/x-authorware-bin"},
+#line 732 "mime-lookup.gperf"
+      {"m4a", "audio/mp4"},
+#line 707 "mime-lookup.gperf"
+      {"xdf", "application/xcap-diff+xml"},
+#line 662 "mime-lookup.gperf"
+      {"cdf", "application/x-netcdf"},
+#line 826 "mime-lookup.gperf"
+      {"fh4", "image/x-freehand"},
+#line 541 "mime-lookup.gperf"
+      {"wqd", "application/vnd.wqd"},
+#line 158 "mime-lookup.gperf"
+      {"acc", "application/vnd.americandynamics.acc"},
+#line 439 "mime-lookup.gperf"
+      {"mgp", "application/vnd.osgeo.mapguide.package"},
+#line 83 "mime-lookup.gperf"
+      {"pdf", "application/pdf"},
+#line 709 "mime-lookup.gperf"
+      {"xhtml", "application/xhtml+xml"},
+#line 583 "mime-lookup.gperf"
+      {"vcd", "application/x-cdlink"},
+#line 169 "mime-lookup.gperf"
+      {"mpm", "application/vnd.blueice.multipass"},
+#line 245 "mime-lookup.gperf"
+      {"fg5", "application/vnd.fujitsu.oasysgp"},
+#line 472 "mime-lookup.gperf"
+      {"sema", "application/vnd.sema"},
+#line 764 "mime-lookup.gperf"
+      {"mka", "audio/x-matroska"},
+#line 156 "mime-lookup.gperf"
+      {"azs", "application/vnd.airzip.filesecure.azs"},
+#line 361 "mime-lookup.gperf"
+      {"xla", "application/vnd.ms-excel"},
+#line 749 "mime-lookup.gperf"
+      {"dts", "audio/vnd.dts"},
+#line 175 "mime-lookup.gperf"
+      {"cla", "application/vnd.claymore"},
+#line 249 "mime-lookup.gperf"
+      {"xbd", "application/vnd.fujixerox.docuworks.binder"},
+#line 385 "mime-lookup.gperf"
+      {"mpt", "application/vnd.ms-project"},
+#line 497 "mime-lookup.gperf"
+      {"stc", "application/vnd.sun.xml.calc.template"},
+#line 141 "mime-lookup.gperf"
+      {"tcap", "application/vnd.3gpp2.tcap"},
+#line 393 "mime-lookup.gperf"
+      {"xps", "application/vnd.ms-xpsdocument"},
+#line 738 "mime-lookup.gperf"
+      {"m2a", "audio/mpeg"},
+#line 851 "mime-lookup.gperf"
+      {"dwf", "model/vnd.dwf"},
+#line 519 "mime-lookup.gperf"
+      {"tpt", "application/vnd.trid.tpt"},
+#line 451 "mime-lookup.gperf"
+      {"pbd", "application/vnd.powerbuilder6"},
+#line 876 "mime-lookup.gperf"
+      {"list", "text/plain"},
+#line 761 "mime-lookup.gperf"
+      {"aifc", "audio/x-aiff"},
+#line 824 "mime-lookup.gperf"
+      {"fh", "image/x-freehand"},
+#line 841 "mime-lookup.gperf"
+      {"xpm", "image/x-xpixmap"},
+#line 779 "mime-lookup.gperf"
+      {"ttc", "font/collection"},
+#line 84 "mime-lookup.gperf"
+      {"pgp", "application/pgp-encrypted"},
+#line 40 "mime-lookup.gperf"
+      {"hqx", "application/mac-binhex40"},
+#line 377 "mime-lookup.gperf"
+      {"pps", "application/vnd.ms-powerpoint"},
+#line 592 "mime-lookup.gperf"
+      {"dgc", "application/x-dgc-compressed"},
+#line 229 "mime-lookup.gperf"
+      {"fdf", "application/vnd.fdf"},
+#line 752 "mime-lookup.gperf"
+      {"pya", "audio/vnd.ms-playready.media.pya"},
+#line 837 "mime-lookup.gperf"
+      {"ppm", "image/x-portable-pixmap"},
+#line 382 "mime-lookup.gperf"
+      {"ppsm", "application/vnd.ms-powerpoint.slideshow.macroenabled.12"},
+#line 759 "mime-lookup.gperf"
+      {"aif", "audio/x-aiff"},
+#line 930 "mime-lookup.gperf"
+      {"vcf", "text/x-vcard"},
+#line 285 "mime-lookup.gperf"
+      {"list3820", "application/vnd.ibm.modcap"},
+#line 41 "mime-lookup.gperf"
+      {"cpt", "application/mac-compactpro"},
+#line 515 "mime-lookup.gperf"
+      {"pcap", "application/vnd.tcpdump.pcap"},
+#line 742 "mime-lookup.gperf"
+      {"spx", "audio/ogg"},
+#line 380 "mime-lookup.gperf"
+      {"pptm", "application/vnd.ms-powerpoint.presentation.macroenabled.12"},
+#line 364 "mime-lookup.gperf"
+      {"xlw", "application/vnd.ms-excel"},
+#line 376 "mime-lookup.gperf"
+      {"ppt", "application/vnd.ms-powerpoint"},
+#line 701 "mime-lookup.gperf"
+      {"z4", "application/x-zmachine"},
+#line 667 "mime-lookup.gperf"
+      {"spc", "application/x-pkcs7-certificates"},
+#line 355 "mime-lookup.gperf"
+      {"mpc", "application/vnd.mophun.certificate"},
+#line 445 "mime-lookup.gperf"
+      {"paw", "application/vnd.pawaafile"},
+#line 726 "mime-lookup.gperf"
+      {"au", "audio/basic"},
+#line 499 "mime-lookup.gperf"
+      {"std", "application/vnd.sun.xml.draw.template"},
+#line 120 "mime-lookup.gperf"
+      {"spp", "application/scvp-vp-response"},
+#line 725 "mime-lookup.gperf"
+      {"adp", "audio/adpcm"},
+#line 384 "mime-lookup.gperf"
+      {"mpp", "application/vnd.ms-project"},
+#line 295 "mime-lookup.gperf"
+      {"xpx", "application/vnd.intercon.formnet"},
+#line 303 "mime-lookup.gperf"
+      {"jam", "application/vnd.jam"},
+#line 951 "mime-lookup.gperf"
+      {"mov", "video/quicktime"},
+#line 822 "mime-lookup.gperf"
+      {"ras", "image/x-cmu-raster"},
+#line 67 "mime-lookup.gperf"
+      {"distz", "application/octet-stream"},
+#line 192 "mime-lookup.gperf"
+      {"wbs", "application/vnd.criticaltools.wbs+xml"},
+#line 440 "mime-lookup.gperf"
+      {"dp", "application/vnd.osgi.dp"},
+#line 768 "mime-lookup.gperf"
+      {"ram", "audio/x-pn-realaudio"},
+#line 433 "mime-lookup.gperf"
+      {"ppsx", "application/vnd.openxmlformats-officedocument.presentationml.slideshow"},
+#line 443 "mime-lookup.gperf"
+      {"pqa", "application/vnd.palm"},
+#line 278 "mime-lookup.gperf"
+      {"jlt", "application/vnd.hp-jlyt"},
+#line 889 "mime-lookup.gperf"
+      {"ms", "text/troff"},
+#line 816 "mime-lookup.gperf"
+      {"wdp", "image/vnd.ms-photo"},
+#line 724 "mime-lookup.gperf"
+      {"zip", "application/zip"},
+#line 888 "mime-lookup.gperf"
+      {"me", "text/troff"},
+#line 234 "mime-lookup.gperf"
+      {"ftc", "application/vnd.fluxtime.clip"},
+#line 976 "mime-lookup.gperf"
+      {"mk3d", "video/x-matroska"},
+#line 605 "mime-lookup.gperf"
+      {"res", "application/x-dtbresource+xml"},
+#line 431 "mime-lookup.gperf"
+      {"pptx", "application/vnd.openxmlformats-officedocument.presentationml.presentation"},
+#line 312 "mime-lookup.gperf"
+      {"flw", "application/vnd.kde.kivio"},
+#line 913 "mime-lookup.gperf"
+      {"cpp", "text/x-c"},
+#line 600 "mime-lookup.gperf"
+      {"fgd", "application/x-director"},
+#line 17 "mime-lookup.gperf"
+      {"davmount", "application/davmount+xml"},
+#line 771 "mime-lookup.gperf"
+      {"wav", "audio/x-wav"},
+#line 542 "mime-lookup.gperf"
+      {"stf", "application/vnd.wt.stf"},
+#line 862 "mime-lookup.gperf"
+      {"x3d", "model/x3d+xml"},
+#line 10 "mime-lookup.gperf"
+      {"ccxml", "application/ccxml+xml"},
+#line 647 "mime-lookup.gperf"
+      {"bat", "application/x-msdownload"},
+#line 760 "mime-lookup.gperf"
+      {"aiff", "audio/x-aiff"},
+#line 867 "mime-lookup.gperf"
+      {"css", "text/css"},
+#line 781 "mime-lookup.gperf"
+      {"ttf", "font/ttf"},
+#line 511 "mime-lookup.gperf"
+      {"xsm", "application/vnd.syncml+xml"},
+#line 713 "mime-lookup.gperf"
+      {"dtd", "application/xml-dtd"},
+#line 101 "mime-lookup.gperf"
+      {"ps", "application/postscript"},
+#line 811 "mime-lookup.gperf"
+      {"fpx", "image/vnd.fpx"},
+#line 57 "mime-lookup.gperf"
+      {"mp4s", "application/mp4"},
+#line 284 "mime-lookup.gperf"
+      {"listafp", "application/vnd.ibm.modcap"},
+#line 71 "mime-lookup.gperf"
+      {"elc", "application/octet-stream"},
+#line 719 "mime-lookup.gperf"
+      {"xhvml", "application/xv+xml"},
+#line 969 "mime-lookup.gperf"
+      {"viv", "video/vnd.vivo"},
+#line 596 "mime-lookup.gperf"
+      {"cst", "application/x-director"},
+#line 814 "mime-lookup.gperf"
+      {"rlc", "image/vnd.fujixerox.edmics-rlc"},
+#line 194 "mime-lookup.gperf"
+      {"ppd", "application/vnd.cups-ppd"},
+#line 557 "mime-lookup.gperf"
+      {"wgt", "application/widget"},
+#line 551 "mime-lookup.gperf"
+      {"spf", "application/vnd.yamaha.smaf-phrase"},
+#line 834 "mime-lookup.gperf"
+      {"pnm", "image/x-portable-anymap"},
+#line 651 "mime-lookup.gperf"
+      {"m14", "application/x-msmediaview"},
+#line 721 "mime-lookup.gperf"
+      {"xvm", "application/xv+xml"},
+#line 708 "mime-lookup.gperf"
+      {"xenc", "application/xenc+xml"},
+#line 222 "mime-lookup.gperf"
+      {"qam", "application/vnd.epson.quickanime"},
+#line 561 "mime-lookup.gperf"
+      {"7z", "application/x-7z-compressed"},
+#line 928 "mime-lookup.gperf"
+      {"uu", "text/x-uuencode"},
+#line 197 "mime-lookup.gperf"
+      {"dart", "application/vnd.dart"},
+#line 821 "mime-lookup.gperf"
+      {"3ds", "image/x-3ds"},
+#line 155 "mime-lookup.gperf"
+      {"azf", "application/vnd.airzip.filesecure.azf"},
+#line 697 "mime-lookup.gperf"
+      {"xz", "application/x-xz"},
+#line 818 "mime-lookup.gperf"
+      {"wbmp", "image/vnd.wap.wbmp"},
+#line 965 "mime-lookup.gperf"
+      {"m4u", "video/vnd.mpegurl"},
+#line 639 "mime-lookup.gperf"
+      {"xbap", "application/x-ms-xbap"},
+#line 670 "mime-lookup.gperf"
+      {"ris", "application/x-research-info-systems"},
+#line 447 "mime-lookup.gperf"
+      {"ei6", "application/vnd.pg.osasli"},
+#line 171 "mime-lookup.gperf"
+      {"rep", "application/vnd.businessobjects"},
+#line 682 "mime-lookup.gperf"
+      {"gam", "application/x-tads"},
+#line 172 "mime-lookup.gperf"
+      {"cdxml", "application/vnd.chemdraw+xml"},
+#line 310 "mime-lookup.gperf"
+      {"chrt", "application/vnd.kde.kchart"},
+#line 933 "mime-lookup.gperf"
+      {"h261", "video/h261"},
+#line 947 "mime-lookup.gperf"
+      {"m1v", "video/mpeg"},
+#line 216 "mime-lookup.gperf"
+      {"svc", "application/vnd.dvb.service"},
+#line 905 "mime-lookup.gperf"
+      {"jad", "text/vnd.sun.j2me.app-descriptor"},
+#line 488 "mime-lookup.gperf"
+      {"sda", "application/vnd.stardivision.draw"},
+#line 812 "mime-lookup.gperf"
+      {"fst", "image/vnd.fst"},
+#line 108 "mime-lookup.gperf"
+      {"rld", "application/resource-lists-diff+xml"},
+#line 601 "mime-lookup.gperf"
+      {"swa", "application/x-director"},
+#line 181 "mime-lookup.gperf"
+      {"c4u", "application/vnd.clonk.c4group"},
+#line 184 "mime-lookup.gperf"
+      {"csp", "application/vnd.commonspace"},
+#line 337 "mime-lookup.gperf"
+      {"lwp", "application/vnd.lotus-wordpro"},
+#line 914 "mime-lookup.gperf"
+      {"h", "text/x-c"},
+#line 163 "mime-lookup.gperf"
+      {"atx", "application/vnd.antix.game-component"},
+#line 388 "mime-lookup.gperf"
+      {"wps", "application/vnd.ms-works"},
+#line 231 "mime-lookup.gperf"
+      {"seed", "application/vnd.fdsn.seed"},
+#line 879 "mime-lookup.gperf"
+      {"dsc", "text/prs.lines.tag"},
+#line 19 "mime-lookup.gperf"
+      {"dssc", "application/dssc+der"},
+#line 146 "mime-lookup.gperf"
+      {"atc", "application/vnd.acucorp"},
+#line 137 "mime-lookup.gperf"
+      {"tsd", "application/timestamped-data"},
+#line 661 "mime-lookup.gperf"
+      {"nc", "application/x-netcdf"},
+#line 6 "mime-lookup.gperf"
+      {"aw", "application/applixware"},
+#line 935 "mime-lookup.gperf"
+      {"h264", "video/h264"},
+#line 865 "mime-lookup.gperf"
+      {"ics", "text/calendar"},
+#line 963 "mime-lookup.gperf"
+      {"fvt", "video/vnd.fvt"},
+#line 727 "mime-lookup.gperf"
+      {"snd", "audio/basic"},
+#line 242 "mime-lookup.gperf"
+      {"oas", "application/vnd.fujitsu.oasys"},
+#line 495 "mime-lookup.gperf"
+      {"sm", "application/vnd.stepmania.stepchart"},
+#line 289 "mime-lookup.gperf"
+      {"icm", "application/vnd.iccprofile"},
+#line 782 "mime-lookup.gperf"
+      {"woff", "font/woff"},
+#line 491 "mime-lookup.gperf"
+      {"sdw", "application/vnd.stardivision.writer"},
+#line 462 "mime-lookup.gperf"
+      {"bed", "application/vnd.realvnc.bed"},
+#line 241 "mime-lookup.gperf"
+      {"fsc", "application/vnd.fsc.weblaunch"},
+#line 508 "mime-lookup.gperf"
+      {"svd", "application/vnd.svd"},
+#line 379 "mime-lookup.gperf"
+      {"ppam", "application/vnd.ms-powerpoint.addin.macroenabled.12"},
+#line 264 "mime-lookup.gperf"
+      {"gac", "application/vnd.groove-account"},
+#line 848 "mime-lookup.gperf"
+      {"mesh", "model/mesh"},
+#line 531 "mime-lookup.gperf"
+      {"vss", "application/vnd.visio"},
+#line 263 "mime-lookup.gperf"
+      {"gqs", "application/vnd.grafeq"},
+#line 603 "mime-lookup.gperf"
+      {"ncx", "application/x-dtbncx+xml"},
+#line 800 "mime-lookup.gperf"
+      {"psd", "image/vnd.adobe.photoshop"},
+#line 356 "mime-lookup.gperf"
+      {"xul", "application/vnd.mozilla.xul+xml"},
+#line 305 "mime-lookup.gperf"
+      {"jisp", "application/vnd.jisp"},
+#line 224 "mime-lookup.gperf"
+      {"ssf", "application/vnd.epson.ssf"},
+#line 254 "mime-lookup.gperf"
+      {"gex", "application/vnd.geometry-explorer"},
+#line 239 "mime-lookup.gperf"
+      {"fnc", "application/vnd.frogans.fnc"},
+#line 221 "mime-lookup.gperf"
+      {"msf", "application/vnd.epson.msf"},
+#line 772 "mime-lookup.gperf"
+      {"xm", "audio/xm"},
+#line 788 "mime-lookup.gperf"
+      {"ief", "image/ief"},
+#line 756 "mime-lookup.gperf"
+      {"rip", "audio/vnd.rip"},
+#line 248 "mime-lookup.gperf"
+      {"xdw", "application/vnd.fujixerox.docuworks"},
+#line 706 "mime-lookup.gperf"
+      {"xaml", "application/xaml+xml"},
+#line 915 "mime-lookup.gperf"
+      {"hh", "text/x-c"},
+#line 147 "mime-lookup.gperf"
+      {"acutc", "application/vnd.acucorp"},
+#line 530 "mime-lookup.gperf"
+      {"vst", "application/vnd.visio"},
+#line 699 "mime-lookup.gperf"
+      {"z2", "application/x-zmachine"},
+#line 613 "mime-lookup.gperf"
+      {"snf", "application/x-font-snf"},
+#line 625 "mime-lookup.gperf"
+      {"hdf", "application/x-hdf"},
+#line 941 "mime-lookup.gperf"
+      {"mp4", "video/mp4"},
+#line 102 "mime-lookup.gperf"
+      {"cww", "application/prs.cww"},
+#line 870 "mime-lookup.gperf"
+      {"htm", "text/html"},
+#line 266 "mime-lookup.gperf"
+      {"gim", "application/vnd.groove-identity-message"},
+#line 769 "mime-lookup.gperf"
+      {"ra", "audio/x-pn-realaudio"},
+#line 165 "mime-lookup.gperf"
+      {"m3u8", "application/vnd.apple.mpegurl"},
+#line 369 "mime-lookup.gperf"
+      {"eot", "application/vnd.ms-fontobject"},
+#line 62 "mime-lookup.gperf"
+      {"dms", "application/octet-stream"},
+#line 645 "mime-lookup.gperf"
+      {"dll", "application/x-msdownload"},
+#line 288 "mime-lookup.gperf"
+      {"icc", "application/vnd.iccprofile"},
+#line 611 "mime-lookup.gperf"
+      {"psf", "application/x-font-linux-psf"},
+#line 408 "mime-lookup.gperf"
+      {"edm", "application/vnd.novadigm.edm"},
+#line 182 "mime-lookup.gperf"
+      {"c11amc", "application/vnd.cluetrust.cartomobile-config"},
+#line 909 "mime-lookup.gperf"
+      {"asm", "text/x-asm"},
+#line 579 "mime-lookup.gperf"
+      {"cba", "application/x-cbr"},
+#line 778 "mime-lookup.gperf"
+      {"xyz", "chemical/x-xyz"},
+#line 675 "mime-lookup.gperf"
+      {"sql", "application/x-sql"},
+#line 599 "mime-lookup.gperf"
+      {"w3d", "application/x-director"},
+#line 329 "mime-lookup.gperf"
+      {"lbd", "application/vnd.llamagraphics.life-balance.desktop"},
+#line 277 "mime-lookup.gperf"
+      {"hps", "application/vnd.hp-hps"},
+#line 235 "mime-lookup.gperf"
+      {"fm", "application/vnd.framemaker"},
+#line 400 "mime-lookup.gperf"
+      {"nitf", "application/vnd.nitf"},
+#line 512 "mime-lookup.gperf"
+      {"bdm", "application/vnd.syncml.dm+wbxml"},
+#line 839 "mime-lookup.gperf"
+      {"tga", "image/x-tga"},
+#line 823 "mime-lookup.gperf"
+      {"cmx", "image/x-cmx"},
+#line 806 "mime-lookup.gperf"
+      {"djv", "image/vnd.djvu"},
+#line 717 "mime-lookup.gperf"
+      {"xspf", "application/xspf+xml"},
+#line 186 "mime-lookup.gperf"
+      {"cmc", "application/vnd.cosmocaller"},
+#line 744 "mime-lookup.gperf"
+      {"sil", "audio/silk"},
+#line 540 "mime-lookup.gperf"
+      {"wpd", "application/vnd.wordperfect"},
+#line 698 "mime-lookup.gperf"
+      {"z1", "application/x-zmachine"},
+#line 477 "mime-lookup.gperf"
+      {"iif", "application/vnd.shana.informed.interchange"},
+#line 552 "mime-lookup.gperf"
+      {"cmp", "application/vnd.yellowriver-custom-menu"},
+#line 105 "mime-lookup.gperf"
+      {"rif", "application/reginfo+xml"},
+#line 452 "mime-lookup.gperf"
+      {"box", "application/vnd.previewsystems.box"},
+#line 409 "mime-lookup.gperf"
+      {"edx", "application/vnd.novadigm.edx"},
+#line 970 "mime-lookup.gperf"
+      {"webm", "video/webm"},
+#line 173 "mime-lookup.gperf"
+      {"mmd", "application/vnd.chipnuts.karaoke-mmd"},
+#line 980 "mime-lookup.gperf"
+      {"asx", "video/x-ms-asf"},
+#line 232 "mime-lookup.gperf"
+      {"dataless", "application/vnd.fdsn.seed"},
+#line 631 "mime-lookup.gperf"
+      {"lha", "application/x-lzh-compressed"},
+#line 681 "mime-lookup.gperf"
+      {"t3", "application/x-t3vm-image"},
+#line 85 "mime-lookup.gperf"
+      {"asc", "application/pgp-signature"},
+#line 357 "mime-lookup.gperf"
+      {"cil", "application/vnd.ms-artgalry"},
+#line 12 "mime-lookup.gperf"
+      {"cdmic", "application/cdmi-container"},
+#line 680 "mime-lookup.gperf"
+      {"sv4crc", "application/x-sv4crc"},
+#line 529 "mime-lookup.gperf"
+      {"vsd", "application/vnd.visio"},
+#line 931 "mime-lookup.gperf"
+      {"3gp", "video/3gpp"},
+#line 517 "mime-lookup.gperf"
+      {"dmp", "application/vnd.tcpdump.pcap"},
+#line 860 "mime-lookup.gperf"
+      {"x3dv", "model/x3d+vrml"},
+#line 739 "mime-lookup.gperf"
+      {"m3a", "audio/mpeg"},
+#line 99 "mime-lookup.gperf"
+      {"ai", "application/postscript"},
+#line 190 "mime-lookup.gperf"
+      {"clkt", "application/vnd.crick.clicker.template"},
+#line 265 "mime-lookup.gperf"
+      {"ghf", "application/vnd.groove-help"},
+#line 684 "mime-lookup.gperf"
+      {"tcl", "application/x-tcl"},
+#line 47 "mime-lookup.gperf"
+      {"mb", "application/mathematica"},
+#line 13 "mime-lookup.gperf"
+      {"cdmid", "application/cdmi-domain"},
+#line 490 "mime-lookup.gperf"
+      {"smf", "application/vnd.stardivision.math"},
+#line 750 "mime-lookup.gperf"
+      {"dtshd", "audio/vnd.dts.hd"},
+#line 481 "mime-lookup.gperf"
+      {"mmf", "application/vnd.smaf"},
+#line 505 "mime-lookup.gperf"
+      {"stw", "application/vnd.sun.xml.writer.template"},
+#line 459 "mime-lookup.gperf"
+      {"qwt", "application/vnd.quark.quarkxpress"},
+#line 985 "mime-lookup.gperf"
+      {"wvx", "video/x-ms-wvx"},
+#line 107 "mime-lookup.gperf"
+      {"rl", "application/resource-lists+xml"},
+#line 845 "mime-lookup.gperf"
+      {"igs", "model/iges"},
+#line 534 "mime-lookup.gperf"
+      {"vsf", "application/vnd.vsf"},
+#line 262 "mime-lookup.gperf"
+      {"gqf", "application/vnd.grafeq"},
+#line 539 "mime-lookup.gperf"
+      {"nbp", "application/vnd.wolfram.player"},
+#line 883 "mime-lookup.gperf"
+      {"tsv", "text/tab-separated-values"},
+#line 65 "mime-lookup.gperf"
+      {"so", "application/octet-stream"},
+#line 293 "mime-lookup.gperf"
+      {"igm", "application/vnd.insors.igm"},
+#line 279 "mime-lookup.gperf"
+      {"pcl", "application/vnd.hp-pcl"},
+#line 958 "mime-lookup.gperf"
+      {"uvs", "video/vnd.dece.sd"},
+#line 187 "mime-lookup.gperf"
+      {"clkx", "application/vnd.crick.clicker"},
+#line 820 "mime-lookup.gperf"
+      {"webp", "image/webp"},
+#line 954 "mime-lookup.gperf"
+      {"uvm", "video/vnd.dece.mobile"},
+#line 874 "mime-lookup.gperf"
+      {"conf", "text/plain"},
+#line 464 "mime-lookup.gperf"
+      {"musicxml", "application/vnd.recordare.musicxml+xml"},
+#line 868 "mime-lookup.gperf"
+      {"csv", "text/csv"},
+#line 39 "mime-lookup.gperf"
+      {"lostxml", "application/lost+xml"},
+#line 787 "mime-lookup.gperf"
+      {"gif", "image/gif"},
+#line 422 "mime-lookup.gperf"
+      {"ods", "application/vnd.oasis.opendocument.spreadsheet"},
+#line 240 "mime-lookup.gperf"
+      {"ltf", "application/vnd.frogans.ltf"},
+#line 203 "mime-lookup.gperf"
+      {"uvt", "application/vnd.dece.ttml+xml"},
+#line 546 "mime-lookup.gperf"
+      {"hvs", "application/vnd.yamaha.hv-script"},
+#line 189 "mime-lookup.gperf"
+      {"clkp", "application/vnd.crick.clicker.palette"},
+#line 428 "mime-lookup.gperf"
+      {"xo", "application/vnd.olpc-sugar"},
+#line 629 "mime-lookup.gperf"
+      {"latex", "application/x-latex"},
+#line 425 "mime-lookup.gperf"
+      {"odm", "application/vnd.oasis.opendocument.text-master"},
+#line 942 "mime-lookup.gperf"
+      {"mp4v", "video/mp4"},
+#line 280 "mime-lookup.gperf"
+      {"pclxl", "application/vnd.hp-pclxl"},
+#line 535 "mime-lookup.gperf"
+      {"wbxml", "application/vnd.wap.wbxml"},
+#line 157 "mime-lookup.gperf"
+      {"azw", "application/vnd.amazon.ebook"},
+#line 982 "mime-lookup.gperf"
+      {"wm", "video/x-ms-wm"},
+#line 979 "mime-lookup.gperf"
+      {"asf", "video/x-ms-asf"},
+#line 104 "mime-lookup.gperf"
+      {"rdf", "application/rdf+xml"},
+#line 50 "mime-lookup.gperf"
+      {"mscml", "application/mediaservercontrol+xml"},
+#line 424 "mime-lookup.gperf"
+      {"odt", "application/vnd.oasis.opendocument.text"},
+#line 294 "mime-lookup.gperf"
+      {"xpw", "application/vnd.intercon.formnet"},
+#line 345 "mime-lookup.gperf"
+      {"igx", "application/vnd.micrografx.igx"},
+#line 783 "mime-lookup.gperf"
+      {"woff2", "font/woff2"},
+#line 716 "mime-lookup.gperf"
+      {"xslt", "application/xslt+xml"},
+#line 609 "mime-lookup.gperf"
+      {"bdf", "application/x-font-bdf"},
+#line 205 "mime-lookup.gperf"
+      {"uvx", "application/vnd.dece.unspecified"},
+#line 429 "mime-lookup.gperf"
+      {"dd2", "application/vnd.oma.dd2+xml"},
+#line 775 "mime-lookup.gperf"
+      {"cmdf", "chemical/x-cmdf"},
+#line 100 "mime-lookup.gperf"
+      {"eps", "application/postscript"},
+#line 937 "mime-lookup.gperf"
+      {"jpm", "video/jpm"},
+#line 458 "mime-lookup.gperf"
+      {"qwd", "application/vnd.quark.quarkxpress"},
+#line 331 "mime-lookup.gperf"
+      {"123", "application/vnd.lotus-1-2-3"},
+#line 407 "mime-lookup.gperf"
+      {"rpss", "application/vnd.nokia.radio-presets"},
+#line 956 "mime-lookup.gperf"
+      {"uvp", "video/vnd.dece.pd"},
+#line 411 "mime-lookup.gperf"
+      {"odc", "application/vnd.oasis.opendocument.chart"},
+#line 926 "mime-lookup.gperf"
+      {"etx", "text/x-setext"},
+#line 984 "mime-lookup.gperf"
+      {"wmx", "video/x-ms-wmx"},
+#line 562 "mime-lookup.gperf"
+      {"abw", "application/x-abiword"},
+#line 887 "mime-lookup.gperf"
+      {"man", "text/troff"},
+#line 880 "mime-lookup.gperf"
+      {"rtx", "text/richtext"},
+#line 817 "mime-lookup.gperf"
+      {"npx", "image/vnd.net-fpx"},
+#line 886 "mime-lookup.gperf"
+      {"roff", "text/troff"},
+#line 96 "mime-lookup.gperf"
+      {"pkipath", "application/pkix-pkipath"},
+#line 406 "mime-lookup.gperf"
+      {"rpst", "application/vnd.nokia.radio-preset"},
+#line 145 "mime-lookup.gperf"
+      {"acu", "application/vnd.acucobol"},
+#line 420 "mime-lookup.gperf"
+      {"odp", "application/vnd.oasis.opendocument.presentation"},
+#line 116 "mime-lookup.gperf"
+      {"sbml", "application/sbml+xml"},
+#line 547 "mime-lookup.gperf"
+      {"hvp", "application/vnd.yamaha.hv-voice"},
+#line 176 "mime-lookup.gperf"
+      {"rp9", "application/vnd.cloanto.rp9"},
+#line 253 "mime-lookup.gperf"
+      {"ggt", "application/vnd.geogebra.tool"},
+#line 751 "mime-lookup.gperf"
+      {"lvp", "audio/vnd.lucent.voice"},
+#line 11 "mime-lookup.gperf"
+      {"cdmia", "application/cdmi-capability"},
+#line 476 "mime-lookup.gperf"
+      {"itp", "application/vnd.shana.informed.formtemplate"},
+#line 950 "mime-lookup.gperf"
+      {"qt", "video/quicktime"},
+#line 201 "mime-lookup.gperf"
+      {"uvd", "application/vnd.dece.data"},
+#line 733 "mime-lookup.gperf"
+      {"mp4a", "audio/mp4"},
+#line 397 "mime-lookup.gperf"
+      {"taglet", "application/vnd.mynfc"},
+#line 988 "mime-lookup.gperf"
+      {"smv", "video/x-smv"},
+#line 664 "mime-lookup.gperf"
+      {"p12", "application/x-pkcs12"},
+#line 415 "mime-lookup.gperf"
+      {"odft", "application/vnd.oasis.opendocument.formula-template"},
+#line 483 "mime-lookup.gperf"
+      {"sdkm", "application/vnd.solent.sdkm+xml"},
+#line 271 "mime-lookup.gperf"
+      {"hal", "application/vnd.hal+xml"},
+#line 861 "mime-lookup.gperf"
+      {"x3dvz", "model/x3d+vrml"},
+#line 56 "mime-lookup.gperf"
+      {"mp21", "application/mp21"},
+#line 268 "mime-lookup.gperf"
+      {"gtm", "application/vnd.groove-tool-message"},
+#line 493 "mime-lookup.gperf"
+      {"sgl", "application/vnd.stardivision.writer-global"},
+#line 545 "mime-lookup.gperf"
+      {"hvd", "application/vnd.yamaha.hv-dic"},
+#line 881 "mime-lookup.gperf"
+      {"sgml", "text/sgml"},
+#line 454 "mime-lookup.gperf"
+      {"qps", "application/vnd.publishare-delta-tree"},
+#line 765 "mime-lookup.gperf"
+      {"m3u", "audio/x-mpegurl"},
+#line 210 "mime-lookup.gperf"
+      {"dna", "application/vnd.dna"},
+#line 637 "mime-lookup.gperf"
+      {"wmd", "application/x-ms-wmd"},
+#line 48 "mime-lookup.gperf"
+      {"mathml", "application/mathml+xml"},
+#line 402 "mime-lookup.gperf"
+      {"nns", "application/vnd.noblenet-sealer"},
+#line 318 "mime-lookup.gperf"
+      {"kwt", "application/vnd.kde.kword"},
+#line 272 "mime-lookup.gperf"
+      {"zmm", "application/vnd.handheld-entertainment+xml"},
+#line 959 "mime-lookup.gperf"
+      {"uvvs", "video/vnd.dece.sd"},
+#line 581 "mime-lookup.gperf"
+      {"cbz", "application/x-cbr"},
+#line 49 "mime-lookup.gperf"
+      {"mbox", "application/mbox"},
+#line 399 "mime-lookup.gperf"
+      {"ntf", "application/vnd.nitf"},
+#line 199 "mime-lookup.gperf"
+      {"uvf", "application/vnd.dece.data"},
+#line 955 "mime-lookup.gperf"
+      {"uvvm", "video/vnd.dece.mobile"},
+#line 36 "mime-lookup.gperf"
+      {"js", "application/javascript"},
+#line 154 "mime-lookup.gperf"
+      {"ahead", "application/vnd.ahead.space"},
+#line 939 "mime-lookup.gperf"
+      {"mj2", "video/mj2"},
+#line 453 "mime-lookup.gperf"
+      {"mgz", "application/vnd.proteus.magazine"},
+#line 328 "mime-lookup.gperf"
+      {"lasxml", "application/vnd.las.las+xml"},
+#line 64 "mime-lookup.gperf"
+      {"mar", "application/octet-stream"},
+#line 471 "mime-lookup.gperf"
+      {"see", "application/vnd.seemail"},
+#line 109 "mime-lookup.gperf"
+      {"rs", "application/rls-services+xml"},
+#line 114 "mime-lookup.gperf"
+      {"rss", "application/rss+xml"},
+#line 555 "mime-lookup.gperf"
+      {"zaz", "application/vnd.zzazz.deck+xml"},
+#line 204 "mime-lookup.gperf"
+      {"uvvt", "application/vnd.dece.ttml+xml"},
+#line 683 "mime-lookup.gperf"
+      {"tar", "application/x-tar"},
+#line 423 "mime-lookup.gperf"
+      {"ots", "application/vnd.oasis.opendocument.spreadsheet-template"},
+#line 414 "mime-lookup.gperf"
+      {"odf", "application/vnd.oasis.opendocument.formula"},
+#line 375 "mime-lookup.gperf"
+      {"stl", "application/vnd.ms-pki.stl"},
+#line 34 "mime-lookup.gperf"
+      {"ser", "application/java-serialized-object"},
+#line 807 "mime-lookup.gperf"
+      {"sub", "image/vnd.dvb.subtitle"},
+#line 899 "mime-lookup.gperf"
+      {"sub", "text/vnd.dvb.subtitle"},
+#line 134 "mime-lookup.gperf"
+      {"tei", "application/tei+xml"},
+#line 455 "mime-lookup.gperf"
+      {"ptid", "application/vnd.pvi.ptid1"},
+#line 652 "mime-lookup.gperf"
+      {"wmf", "application/x-msmetafile"},
+#line 890 "mime-lookup.gperf"
+      {"ttl", "text/turtle"},
+#line 75 "mime-lookup.gperf"
+      {"ogx", "application/ogg"},
+#line 543 "mime-lookup.gperf"
+      {"xar", "application/vnd.xara"},
+#line 115 "mime-lookup.gperf"
+      {"rtf", "application/rtf"},
+#line 195 "mime-lookup.gperf"
+      {"car", "application/vnd.curl.car"},
+#line 426 "mime-lookup.gperf"
+      {"ott", "application/vnd.oasis.opendocument.text-template"},
+#line 587 "mime-lookup.gperf"
+      {"nsc", "application/x-conference"},
+#line 735 "mime-lookup.gperf"
+      {"mp2", "audio/mpeg"},
+#line 21 "mime-lookup.gperf"
+      {"ecma", "application/ecmascript"},
+#line 566 "mime-lookup.gperf"
+      {"x32", "application/x-authorware-bin"},
+#line 940 "mime-lookup.gperf"
+      {"mjp2", "video/mj2"},
+#line 921 "mime-lookup.gperf"
+      {"java", "text/x-java-source"},
+#line 650 "mime-lookup.gperf"
+      {"m13", "application/x-msmediaview"},
+#line 641 "mime-lookup.gperf"
+      {"obd", "application/x-msbinder"},
+#line 850 "mime-lookup.gperf"
+      {"dae", "model/vnd.collada+xml"},
+#line 206 "mime-lookup.gperf"
+      {"uvvx", "application/vnd.dece.unspecified"},
+#line 82 "mime-lookup.gperf"
+      {"xer", "application/patch-ops-error+xml"},
+#line 398 "mime-lookup.gperf"
+      {"nlu", "application/vnd.neurolanguage.nlu"},
+#line 94 "mime-lookup.gperf"
+      {"cer", "application/pkix-cert"},
+#line 688 "mime-lookup.gperf"
+      {"texi", "application/x-texinfo"},
+#line 5 "mime-lookup.gperf"
+      {"ez", "application/andrew-inset"},
+#line 97 "mime-lookup.gperf"
+      {"pki", "application/pkixcmp"},
+#line 619 "mime-lookup.gperf"
+      {"spl", "application/x-futuresplash"},
+#line 404 "mime-lookup.gperf"
+      {"ngdat", "application/vnd.nokia.n-gage.data"},
+#line 894 "mime-lookup.gperf"
+      {"vcard", "text/vcard"},
+#line 366 "mime-lookup.gperf"
+      {"xlsb", "application/vnd.ms-excel.sheet.binary.macroenabled.12"},
+#line 27 "mime-lookup.gperf"
+      {"gpx", "application/gpx+xml"},
+#line 657 "mime-lookup.gperf"
+      {"pub", "application/x-mspublisher"},
+#line 668 "mime-lookup.gperf"
+      {"p7r", "application/x-pkcs7-certreqresp"},
+#line 135 "mime-lookup.gperf"
+      {"teicorpus", "application/tei+xml"},
+#line 358 "mime-lookup.gperf"
+      {"cab", "application/vnd.ms-cab-compressed"},
+#line 269 "mime-lookup.gperf"
+      {"tpl", "application/vnd.groove-tool-template"},
+#line 957 "mime-lookup.gperf"
+      {"uvvp", "video/vnd.dece.pd"},
+#line 138 "mime-lookup.gperf"
+      {"plb", "application/vnd.3gpp.pic-bw-large"},
+#line 209 "mime-lookup.gperf"
+      {"fe_launch", "application/vnd.denovo.fcselayout-link"},
+#line 257 "mime-lookup.gperf"
+      {"g2w", "application/vnd.geoplan"},
+#line 972 "mime-lookup.gperf"
+      {"fli", "video/x-fli"},
+#line 484 "mime-lookup.gperf"
+      {"sdkd", "application/vnd.solent.sdkm+xml"},
+#line 904 "mime-lookup.gperf"
+      {"spot", "text/vnd.in3d.spot"},
+#line 575 "mime-lookup.gperf"
+      {"bz", "application/x-bzip"},
+#line 692 "mime-lookup.gperf"
+      {"der", "application/x-x509-ca-cert"},
+#line 412 "mime-lookup.gperf"
+      {"otc", "application/vnd.oasis.opendocument.chart-template"},
+#line 317 "mime-lookup.gperf"
+      {"kwd", "application/vnd.kde.kword"},
+#line 112 "mime-lookup.gperf"
+      {"roa", "application/rpki-roa"},
+#line 715 "mime-lookup.gperf"
+      {"xpl", "application/xproc+xml"},
+#line 632 "mime-lookup.gperf"
+      {"mie", "application/x-mie"},
+#line 106 "mime-lookup.gperf"
+      {"rnc", "application/relax-ng-compact-syntax"},
+#line 844 "mime-lookup.gperf"
+      {"mime", "message/rfc822"},
+#line 167 "mime-lookup.gperf"
+      {"iota", "application/vnd.astraea-software.iota"},
+#line 421 "mime-lookup.gperf"
+      {"otp", "application/vnd.oasis.opendocument.presentation-template"},
+#line 666 "mime-lookup.gperf"
+      {"p7b", "application/x-pkcs7-certificates"},
+#line 700 "mime-lookup.gperf"
+      {"z3", "application/x-zmachine"},
+#line 401 "mime-lookup.gperf"
+      {"nnd", "application/vnd.noblenet-directory"},
+#line 532 "mime-lookup.gperf"
+      {"vsw", "application/vnd.visio"},
+#line 202 "mime-lookup.gperf"
+      {"uvvd", "application/vnd.dece.data"},
+#line 590 "mime-lookup.gperf"
+      {"deb", "application/x-debian-package"},
+#line 934 "mime-lookup.gperf"
+      {"h263", "video/h263"},
+#line 855 "mime-lookup.gperf"
+      {"vtu", "model/vnd.vtu"},
+#line 291 "mime-lookup.gperf"
+      {"ivp", "application/vnd.immervision-ivp"},
+#line 659 "mime-lookup.gperf"
+      {"trm", "application/x-msterminal"},
+#line 161 "mime-lookup.gperf"
+      {"cii", "application/vnd.anser-web-certificate-issue-initiation"},
+#line 736 "mime-lookup.gperf"
+      {"mp2a", "audio/mpeg"},
+#line 678 "mime-lookup.gperf"
+      {"srt", "application/x-subrip"},
+#line 113 "mime-lookup.gperf"
+      {"rsd", "application/rsd+xml"},
+#line 334 "mime-lookup.gperf"
+      {"nsf", "application/vnd.lotus-notes"},
+#line 527 "mime-lookup.gperf"
+      {"uoml", "application/vnd.uoml+xml"},
+#line 306 "mime-lookup.gperf"
+      {"joda", "application/vnd.joost.joda-archive"},
+#line 620 "mime-lookup.gperf"
+      {"gca", "application/x-gca-compressed"},
+#line 449 "mime-lookup.gperf"
+      {"wg", "application/vnd.pmi.widget"},
+#line 127 "mime-lookup.gperf"
+      {"rq", "application/sparql-query"},
+#line 371 "mime-lookup.gperf"
+      {"ims", "application/vnd.ms-ims"},
+#line 960 "mime-lookup.gperf"
+      {"uvv", "video/vnd.dece.video"},
+#line 304 "mime-lookup.gperf"
+      {"rms", "application/vnd.jcp.javame.midlet-rms"},
+#line 467 "mime-lookup.gperf"
+      {"rm", "application/vnd.rn-realmedia"},
+#line 863 "mime-lookup.gperf"
+      {"x3dz", "model/x3d+xml"},
+#line 847 "mime-lookup.gperf"
+      {"msh", "model/mesh"},
+#line 200 "mime-lookup.gperf"
+      {"uvvf", "application/vnd.dece.data"},
+#line 729 "mime-lookup.gperf"
+      {"midi", "audio/midi"},
+#line 757 "mime-lookup.gperf"
+      {"weba", "audio/webm"},
+#line 593 "mime-lookup.gperf"
+      {"dir", "application/x-director"},
+#line 693 "mime-lookup.gperf"
+      {"crt", "application/x-x509-ca-cert"},
+#line 351 "mime-lookup.gperf"
+      {"msl", "application/vnd.mobius.msl"},
+#line 133 "mime-lookup.gperf"
+      {"ssml", "application/ssml+xml"},
+#line 128 "mime-lookup.gperf"
+      {"srx", "application/sparql-results+xml"},
+#line 737 "mime-lookup.gperf"
+      {"mp3", "audio/mpeg"},
+#line 220 "mime-lookup.gperf"
+      {"esf", "application/vnd.epson.esf"},
+#line 691 "mime-lookup.gperf"
+      {"src", "application/x-wais-source"},
+#line 895 "mime-lookup.gperf"
+      {"curl", "text/vnd.curl"},
+#line 792 "mime-lookup.gperf"
+      {"ktx", "image/ktx"},
+#line 43 "mime-lookup.gperf"
+      {"mrc", "application/marc"},
+#line 983 "mime-lookup.gperf"
+      {"wmv", "video/x-ms-wmv"},
+#line 780 "mime-lookup.gperf"
+      {"otf", "font/otf"},
+#line 315 "mime-lookup.gperf"
+      {"kpt", "application/vnd.kde.kpresenter"},
+#line 805 "mime-lookup.gperf"
+      {"djvu", "image/vnd.djvu"},
+#line 589 "mime-lookup.gperf"
+      {"csh", "application/x-csh"},
+#line 142 "mime-lookup.gperf"
+      {"pwn", "application/vnd.3m.post-it-notes"},
+#line 712 "mime-lookup.gperf"
+      {"xsl", "application/xml"},
+#line 630 "mime-lookup.gperf"
+      {"lzh", "application/x-lzh-compressed"},
+#line 246 "mime-lookup.gperf"
+      {"bh2", "application/vnd.fujitsu.oasysprs"},
+#line 907 "mime-lookup.gperf"
+      {"wmls", "text/vnd.wap.wmlscript"},
+#line 218 "mime-lookup.gperf"
+      {"mag", "application/vnd.ecowin.chart"},
+#line 777 "mime-lookup.gperf"
+      {"csml", "chemical/x-csml"},
+#line 44 "mime-lookup.gperf"
+      {"mrcx", "application/marcxml+xml"},
+#line 486 "mime-lookup.gperf"
+      {"sfs", "application/vnd.spotfire.sfs"},
+#line 594 "mime-lookup.gperf"
+      {"dcr", "application/x-director"},
+#line 815 "mime-lookup.gperf"
+      {"mdi", "image/vnd.ms-modi"},
+#line 633 "mime-lookup.gperf"
+      {"prc", "application/x-mobipocket-ebook"},
+#line 864 "mime-lookup.gperf"
+      {"appcache", "text/cache-manifest"},
+#line 166 "mime-lookup.gperf"
+      {"swi", "application/vnd.aristanetworks.swi"},
+#line 343 "mime-lookup.gperf"
+      {"mfm", "application/vnd.mfmp"},
+#line 74 "mime-lookup.gperf"
+      {"opf", "application/oebps-package+xml"},
+#line 132 "mime-lookup.gperf"
+      {"ssdl", "application/ssdl+xml"},
+#line 177 "mime-lookup.gperf"
+      {"c4g", "application/vnd.clonk.c4group"},
+#line 191 "mime-lookup.gperf"
+      {"clkw", "application/vnd.crick.clicker.wordbank"},
+#line 720 "mime-lookup.gperf"
+      {"xvml", "application/xv+xml"},
+#line 7 "mime-lookup.gperf"
+      {"atom", "application/atom+xml"},
+#line 686 "mime-lookup.gperf"
+      {"tfm", "application/x-tex-tfm"},
+#line 144 "mime-lookup.gperf"
+      {"imp", "application/vnd.accpac.simply.imp"},
+#line 871 "mime-lookup.gperf"
+      {"n3", "text/n3"},
+#line 537 "mime-lookup.gperf"
+      {"wmlsc", "application/vnd.wap.wmlscriptc"},
+#line 770 "mime-lookup.gperf"
+      {"rmp", "audio/x-pn-realaudio-plugin"},
+#line 111 "mime-lookup.gperf"
+      {"mft", "application/rpki-manifest"},
+#line 565 "mime-lookup.gperf"
+      {"aab", "application/x-authorware-bin"},
+#line 745 "mime-lookup.gperf"
+      {"uva", "audio/vnd.dece.audio"},
+#line 584 "mime-lookup.gperf"
+      {"cfs", "application/x-cfs-compressed"},
+#line 903 "mime-lookup.gperf"
+      {"3dml", "text/vnd.in3d.3dml"},
+#line 320 "mime-lookup.gperf"
+      {"kia", "application/vnd.kidspiration"},
+#line 784 "mime-lookup.gperf"
+      {"bmp", "image/bmp"},
+#line 214 "mime-lookup.gperf"
+      {"kpxx", "application/vnd.ds-keypoint"},
+#line 640 "mime-lookup.gperf"
+      {"mdb", "application/x-msaccess"},
+#line 672 "mime-lookup.gperf"
+      {"shar", "application/x-shar"},
+#line 68 "mime-lookup.gperf"
+      {"pkg", "application/octet-stream"},
+#line 616 "mime-lookup.gperf"
+      {"pfm", "application/x-font-type1"},
+#line 73 "mime-lookup.gperf"
+      {"oda", "application/oda"},
+#line 642 "mime-lookup.gperf"
+      {"crd", "application/x-mscardfile"},
+#line 536 "mime-lookup.gperf"
+      {"wmlc", "application/vnd.wap.wmlc"},
+#line 482 "mime-lookup.gperf"
+      {"teacher", "application/vnd.smart.teacher"},
+#line 46 "mime-lookup.gperf"
+      {"nb", "application/mathematica"},
+#line 610 "mime-lookup.gperf"
+      {"gsf", "application/x-font-ghostscript"},
+#line 767 "mime-lookup.gperf"
+      {"wma", "audio/x-ms-wma"},
+#line 898 "mime-lookup.gperf"
+      {"scurl", "text/vnd.curl.scurl"},
+#line 918 "mime-lookup.gperf"
+      {"for", "text/x-fortran"},
+#line 897 "mime-lookup.gperf"
+      {"mcurl", "text/vnd.curl.mcurl"},
+#line 243 "mime-lookup.gperf"
+      {"oa2", "application/vnd.fujitsu.oasys2"},
+#line 392 "mime-lookup.gperf"
+      {"wpl", "application/vnd.ms-wpl"},
+#line 949 "mime-lookup.gperf"
+      {"ogv", "video/ogg"},
+#line 442 "mime-lookup.gperf"
+      {"pdb", "application/vnd.palm"},
+#line 86 "mime-lookup.gperf"
+      {"sig", "application/pgp-signature"},
+#line 687 "mime-lookup.gperf"
+      {"texinfo", "application/x-texinfo"},
+#line 117 "mime-lookup.gperf"
+      {"scq", "application/scvp-cv-request"},
+#line 902 "mime-lookup.gperf"
+      {"gv", "text/vnd.graphviz"},
+#line 943 "mime-lookup.gperf"
+      {"mpg4", "video/mp4"},
+#line 586 "mime-lookup.gperf"
+      {"pgn", "application/x-chess-pgn"},
+#line 259 "mime-lookup.gperf"
+      {"gmx", "application/vnd.gmx"},
+#line 148 "mime-lookup.gperf"
+      {"air", "application/vnd.adobe.air-application-installer-package+zip"},
+#line 961 "mime-lookup.gperf"
+      {"uvvv", "video/vnd.dece.video"},
+#line 514 "mime-lookup.gperf"
+      {"tao", "application/vnd.tao.intent-module-archive"},
+#line 654 "mime-lookup.gperf"
+      {"emf", "application/x-msmetafile"},
+#line 665 "mime-lookup.gperf"
+      {"pfx", "application/x-pkcs12"},
+#line 196 "mime-lookup.gperf"
+      {"pcurl", "application/vnd.curl.pcurl"},
+#line 87 "mime-lookup.gperf"
+      {"prf", "application/pics-rules"},
+#line 567 "mime-lookup.gperf"
+      {"u32", "application/x-authorware-bin"},
+#line 548 "mime-lookup.gperf"
+      {"osf", "application/vnd.yamaha.openscoreformat"},
+#line 15 "mime-lookup.gperf"
+      {"cdmiq", "application/cdmi-queue"},
+#line 846 "mime-lookup.gperf"
+      {"iges", "model/iges"},
+#line 578 "mime-lookup.gperf"
+      {"cbr", "application/x-cbr"},
+#line 795 "mime-lookup.gperf"
+      {"sgi", "image/sgi"},
+#line 183 "mime-lookup.gperf"
+      {"c11amz", "application/vnd.cluetrust.cartomobile-config-pkg"},
+#line 711 "mime-lookup.gperf"
+      {"xml", "application/xml"},
+#line 896 "mime-lookup.gperf"
+      {"dcurl", "text/vnd.curl.dcurl"},
+#line 776 "mime-lookup.gperf"
+      {"cml", "chemical/x-cml"},
+#line 932 "mime-lookup.gperf"
+      {"3g2", "video/3gpp2"},
+#line 747 "mime-lookup.gperf"
+      {"eol", "audio/vnd.digital-winds"},
+#line 859 "mime-lookup.gperf"
+      {"x3dbz", "model/x3d+binary"},
+#line 563 "mime-lookup.gperf"
+      {"ace", "application/x-ace-compressed"},
+#line 193 "mime-lookup.gperf"
+      {"pml", "application/vnd.ctc-posml"},
+#line 316 "mime-lookup.gperf"
+      {"ksp", "application/vnd.kde.kspread"},
+#line 354 "mime-lookup.gperf"
+      {"mpn", "application/vnd.mophun.application"},
+#line 987 "mime-lookup.gperf"
+      {"movie", "video/x-sgi-movie"},
+#line 524 "mime-lookup.gperf"
+      {"utz", "application/vnd.uiq.theme"},
+#line 869 "mime-lookup.gperf"
+      {"html", "text/html"},
+#line 492 "mime-lookup.gperf"
+      {"vor", "application/vnd.stardivision.writer"},
+#line 276 "mime-lookup.gperf"
+      {"hpid", "application/vnd.hp-hpid"},
+#line 227 "mime-lookup.gperf"
+      {"ez2", "application/vnd.ezpix-album"},
+#line 322 "mime-lookup.gperf"
+      {"knp", "application/vnd.kinar"},
+#line 786 "mime-lookup.gperf"
+      {"g3", "image/g3fax"},
+#line 281 "mime-lookup.gperf"
+      {"sfd-hdstx", "application/vnd.hydrostatix.sof-data"},
+#line 501 "mime-lookup.gperf"
+      {"sti", "application/vnd.sun.xml.impress.template"},
+#line 694 "mime-lookup.gperf"
+      {"fig", "application/x-xfig"},
+#line 576 "mime-lookup.gperf"
+      {"bz2", "application/x-bzip2"},
+#line 344 "mime-lookup.gperf"
+      {"flo", "application/vnd.micrografx.flo"},
+#line 740 "mime-lookup.gperf"
+      {"oga", "audio/ogg"},
+#line 618 "mime-lookup.gperf"
+      {"arc", "application/x-freearc"},
+#line 446 "mime-lookup.gperf"
+      {"str", "application/vnd.pg.format"},
+#line 981 "mime-lookup.gperf"
+      {"vob", "video/x-ms-vob"},
+#line 577 "mime-lookup.gperf"
+      {"boz", "application/x-bzip2"},
+#line 198 "mime-lookup.gperf"
+      {"rdz", "application/vnd.data-vision.rdz"},
+#line 746 "mime-lookup.gperf"
+      {"uvva", "audio/vnd.dece.audio"},
+#line 185 "mime-lookup.gperf"
+      {"cdbcmsg", "application/vnd.contact.cmsg"},
+#line 14 "mime-lookup.gperf"
+      {"cdmio", "application/cdmi-object"},
+#line 244 "mime-lookup.gperf"
+      {"oa3", "application/vnd.fujitsu.oasys3"},
+#line 946 "mime-lookup.gperf"
+      {"mpe", "video/mpeg"},
+#line 441 "mime-lookup.gperf"
+      {"esa", "application/vnd.osgi.subsystem"},
+#line 853 "mime-lookup.gperf"
+      {"gtw", "model/vnd.gtw"},
+#line 734 "mime-lookup.gperf"
+      {"mpga", "audio/mpeg"},
+#line 9 "mime-lookup.gperf"
+      {"atomsvc", "application/atomsvc+xml"},
+#line 617 "mime-lookup.gperf"
+      {"afm", "application/x-font-type1"},
+#line 628 "mime-lookup.gperf"
+      {"jnlp", "application/x-java-jnlp-file"},
+#line 258 "mime-lookup.gperf"
+      {"g3w", "application/vnd.geospace"},
+#line 967 "mime-lookup.gperf"
+      {"uvu", "video/vnd.uvvu.mp4"},
+#line 403 "mime-lookup.gperf"
+      {"nnw", "application/vnd.noblenet-web"},
+#line 8 "mime-lookup.gperf"
+      {"atomcat", "application/atomcat+xml"},
+#line 608 "mime-lookup.gperf"
+      {"eva", "application/x-eva"},
+#line 696 "mime-lookup.gperf"
+      {"xpi", "application/x-xpinstall"},
+#line 553 "mime-lookup.gperf"
+      {"zir", "application/vnd.zul"},
+#line 372 "mime-lookup.gperf"
+      {"lrm", "application/vnd.ms-lrm"},
+#line 559 "mime-lookup.gperf"
+      {"wsdl", "application/wsdl+xml"},
+#line 301 "mime-lookup.gperf"
+      {"xpr", "application/vnd.is-xpr"},
+#line 520 "mime-lookup.gperf"
+      {"mxs", "application/vnd.triscape.mxs"},
+#line 162 "mime-lookup.gperf"
+      {"fti", "application/vnd.anser-web-funds-transfer-initiation"},
+#line 502 "mime-lookup.gperf"
+      {"sxm", "application/vnd.sun.xml.math"},
+#line 852 "mime-lookup.gperf"
+      {"gdl", "model/vnd.gdl"},
+#line 153 "mime-lookup.gperf"
+      {"xfdf", "application/vnd.adobe.xfdf"},
+#line 604 "mime-lookup.gperf"
+      {"dtb", "application/x-dtbook+xml"},
+#line 391 "mime-lookup.gperf"
+      {"wdb", "application/vnd.ms-works"},
+#line 808 "mime-lookup.gperf"
+      {"dwg", "image/vnd.dwg"},
+#line 228 "mime-lookup.gperf"
+      {"ez3", "application/vnd.ezpix-package"},
+#line 290 "mime-lookup.gperf"
+      {"igl", "application/vnd.igloader"},
+#line 952 "mime-lookup.gperf"
+      {"uvh", "video/vnd.dece.hd"},
+#line 872 "mime-lookup.gperf"
+      {"txt", "text/plain"},
+#line 635 "mime-lookup.gperf"
+      {"application", "application/x-ms-application"},
+#line 51 "mime-lookup.gperf"
+      {"metalink", "application/metalink+xml"},
+#line 878 "mime-lookup.gperf"
+      {"in", "text/plain"},
+#line 283 "mime-lookup.gperf"
+      {"afp", "application/vnd.ibm.modcap"},
+#line 270 "mime-lookup.gperf"
+      {"vcg", "application/vnd.groove-vcard"},
+#line 33 "mime-lookup.gperf"
+      {"jar", "application/java-archive"},
+#line 755 "mime-lookup.gperf"
+      {"ecelp9600", "audio/vnd.nuera.ecelp9600"},
+#line 598 "mime-lookup.gperf"
+      {"cxt", "application/x-director"},
+#line 327 "mime-lookup.gperf"
+      {"sse", "application/vnd.kodak-descriptor"},
+#line 754 "mime-lookup.gperf"
+      {"ecelp7470", "audio/vnd.nuera.ecelp7470"},
+#line 938 "mime-lookup.gperf"
+      {"jpgm", "video/jpm"},
+#line 669 "mime-lookup.gperf"
+      {"rar", "application/x-rar-compressed"},
+#line 496 "mime-lookup.gperf"
+      {"sxc", "application/vnd.sun.xml.calc"},
+#line 648 "mime-lookup.gperf"
+      {"msi", "application/x-msdownload"},
+#line 207 "mime-lookup.gperf"
+      {"uvz", "application/vnd.dece.zip"},
+#line 858 "mime-lookup.gperf"
+      {"x3db", "model/x3d+binary"},
+#line 927 "mime-lookup.gperf"
+      {"sfv", "text/x-sfv"},
+#line 906 "mime-lookup.gperf"
+      {"wml", "text/vnd.wap.wml"},
+#line 521 "mime-lookup.gperf"
+      {"tra", "application/vnd.trueapp"},
+#line 32 "mime-lookup.gperf"
+      {"ipfix", "application/ipfix"},
+#line 690 "mime-lookup.gperf"
+      {"ustar", "application/x-ustar"},
+#line 494 "mime-lookup.gperf"
+      {"smzip", "application/vnd.stepmania.package"},
+#line 213 "mime-lookup.gperf"
+      {"dfac", "application/vnd.dreamfactory"},
+#line 912 "mime-lookup.gperf"
+      {"cxx", "text/x-c"},
+#line 61 "mime-lookup.gperf"
+      {"bin", "application/octet-stream"},
+#line 638 "mime-lookup.gperf"
+      {"wmz", "application/x-ms-wmz"},
+#line 653 "mime-lookup.gperf"
+      {"wmz", "application/x-msmetafile"},
+#line 22 "mime-lookup.gperf"
+      {"emma", "application/emma+xml"},
+#line 794 "mime-lookup.gperf"
+      {"btif", "image/prs.btif"},
+#line 573 "mime-lookup.gperf"
+      {"blb", "application/x-blorb"},
+#line 119 "mime-lookup.gperf"
+      {"spq", "application/scvp-vp-request"},
+#line 498 "mime-lookup.gperf"
+      {"sxd", "application/vnd.sun.xml.draw"},
+#line 230 "mime-lookup.gperf"
+      {"mseed", "application/vnd.fdsn.mseed"},
+#line 748 "mime-lookup.gperf"
+      {"dra", "audio/vnd.dra"},
+#line 251 "mime-lookup.gperf"
+      {"txd", "application/vnd.genomatix.tuxedo"},
+#line 649 "mime-lookup.gperf"
+      {"mvb", "application/x-msmediaview"},
+#line 485 "mime-lookup.gperf"
+      {"dxp", "application/vnd.spotfire.dxp"},
+#line 968 "mime-lookup.gperf"
+      {"uvvu", "video/vnd.uvvu.mp4"},
+#line 139 "mime-lookup.gperf"
+      {"psb", "application/vnd.3gpp.pic-bw-small"},
+#line 63 "mime-lookup.gperf"
+      {"lrf", "application/octet-stream"},
+#line 606 "mime-lookup.gperf"
+      {"dvi", "application/x-dvi"},
+#line 330 "mime-lookup.gperf"
+      {"lbe", "application/vnd.llamagraphics.life-balance.exchange+xml"},
+#line 945 "mime-lookup.gperf"
+      {"mpg", "video/mpeg"},
+#line 150 "mime-lookup.gperf"
+      {"fxp", "application/vnd.adobe.fxp"},
+#line 60 "mime-lookup.gperf"
+      {"mxf", "application/mxf"},
+#line 554 "mime-lookup.gperf"
+      {"zirz", "application/vnd.zul"},
+#line 286 "mime-lookup.gperf"
+      {"irm", "application/vnd.ibm.rights-management"},
+#line 332 "mime-lookup.gperf"
+      {"apr", "application/vnd.lotus-approach"},
+#line 140 "mime-lookup.gperf"
+      {"pvb", "application/vnd.3gpp.pic-bw-var"},
+#line 353 "mime-lookup.gperf"
+      {"txf", "application/vnd.mobius.txf"},
+#line 226 "mime-lookup.gperf"
+      {"et3", "application/vnd.eszigno3+xml"},
+#line 885 "mime-lookup.gperf"
+      {"tr", "text/troff"},
+#line 522 "mime-lookup.gperf"
+      {"ufd", "application/vnd.ufdl"},
+#line 753 "mime-lookup.gperf"
+      {"ecelp4800", "audio/vnd.nuera.ecelp4800"},
+#line 444 "mime-lookup.gperf"
+      {"oprc", "application/vnd.palm"},
+#line 538 "mime-lookup.gperf"
+      {"wtb", "application/vnd.webturbo"},
+#line 292 "mime-lookup.gperf"
+      {"ivu", "application/vnd.immervision-ivu"},
+#line 953 "mime-lookup.gperf"
+      {"uvvh", "video/vnd.dece.hd"},
+#line 989 "mime-lookup.gperf"
+      {"ice", "x-conference/x-cooltalk"},
+#line 962 "mime-lookup.gperf"
+      {"dvb", "video/vnd.dvb.file"},
+#line 273 "mime-lookup.gperf"
+      {"hbci", "application/vnd.hbci"},
+#line 469 "mime-lookup.gperf"
+      {"link66", "application/vnd.route66.link66+xml"},
+#line 125 "mime-lookup.gperf"
+      {"smi", "application/smil+xml"},
+#line 233 "mime-lookup.gperf"
+      {"gph", "application/vnd.flographit"},
+#line 614 "mime-lookup.gperf"
+      {"pfa", "application/x-font-type1"},
+#line 813 "mime-lookup.gperf"
+      {"mmr", "image/vnd.fujixerox.edmics-mmr"},
+#line 427 "mime-lookup.gperf"
+      {"oth", "application/vnd.oasis.opendocument.text-web"},
+#line 212 "mime-lookup.gperf"
+      {"dpg", "application/vnd.dpgraph"},
+#line 103 "mime-lookup.gperf"
+      {"pskcxml", "application/pskc+xml"},
+#line 809 "mime-lookup.gperf"
+      {"dxf", "image/vnd.dxf"},
+#line 208 "mime-lookup.gperf"
+      {"uvvz", "application/vnd.dece.zip"},
+#line 572 "mime-lookup.gperf"
+      {"torrent", "application/x-bittorrent"},
+#line 300 "mime-lookup.gperf"
+      {"irp", "application/vnd.irepository.package+xml"},
+#line 626 "mime-lookup.gperf"
+      {"install", "application/x-install-instructions"},
+#line 131 "mime-lookup.gperf"
+      {"sru", "application/sru+xml"},
+#line 877 "mime-lookup.gperf"
+      {"log", "text/plain"},
+#line 634 "mime-lookup.gperf"
+      {"mobi", "application/x-mobipocket-ebook"},
+#line 923 "mime-lookup.gperf"
+      {"opml", "text/x-opml"},
+#line 475 "mime-lookup.gperf"
+      {"ifm", "application/vnd.shana.informed.formdata"},
+#line 849 "mime-lookup.gperf"
+      {"silo", "model/mesh"},
+#line 978 "mime-lookup.gperf"
+      {"mng", "video/x-mng"},
+#line 663 "mime-lookup.gperf"
+      {"nzb", "application/x-nzb"},
+#line 123 "mime-lookup.gperf"
+      {"setreg", "application/set-registration-initiation"},
+#line 296 "mime-lookup.gperf"
+      {"i2g", "application/vnd.intergeo"},
+#line 893 "mime-lookup.gperf"
+      {"urls", "text/uri-list"},
+#line 796 "mime-lookup.gperf"
+      {"svg", "image/svg+xml"},
+#line 986 "mime-lookup.gperf"
+      {"avi", "video/x-msvideo"},
+#line 77 "mime-lookup.gperf"
+      {"onetoc", "application/onenote"},
+#line 237 "mime-lookup.gperf"
+      {"maker", "application/vnd.framemaker"},
+#line 730 "mime-lookup.gperf"
+      {"kar", "audio/midi"},
+#line 793 "mime-lookup.gperf"
+      {"png", "image/png"},
+#line 225 "mime-lookup.gperf"
+      {"es3", "application/vnd.eszigno3+xml"},
+#line 219 "mime-lookup.gperf"
+      {"nml", "application/vnd.enliven"},
+#line 79 "mime-lookup.gperf"
+      {"onetmp", "application/onenote"},
+#line 299 "mime-lookup.gperf"
+      {"rcprofile", "application/vnd.ipunplugged.rcprofile"},
+#line 349 "mime-lookup.gperf"
+      {"mbk", "application/vnd.mobius.mbk"},
+#line 95 "mime-lookup.gperf"
+      {"crl", "application/pkix-crl"},
+#line 843 "mime-lookup.gperf"
+      {"eml", "message/rfc822"},
+#line 307 "mime-lookup.gperf"
+      {"ktz", "application/vnd.kahootz"},
+#line 126 "mime-lookup.gperf"
+      {"smil", "application/smil+xml"},
+#line 936 "mime-lookup.gperf"
+      {"jpgv", "video/jpeg"},
+#line 797 "mime-lookup.gperf"
+      {"svgz", "image/svg+xml"},
+#line 655 "mime-lookup.gperf"
+      {"emz", "application/x-msmetafile"},
+#line 801 "mime-lookup.gperf"
+      {"uvi", "image/vnd.dece.graphic"},
+#line 298 "mime-lookup.gperf"
+      {"qfx", "application/vnd.intu.qfx"},
+#line 18 "mime-lookup.gperf"
+      {"dbk", "application/docbook+xml"},
+#line 159 "mime-lookup.gperf"
+      {"ami", "application/vnd.amiga.ami"},
+#line 571 "mime-lookup.gperf"
+      {"bcpio", "application/x-bcpio"},
+#line 418 "mime-lookup.gperf"
+      {"odi", "application/vnd.oasis.opendocument.image"},
+#line 313 "mime-lookup.gperf"
+      {"kon", "application/vnd.kde.kontour"},
+#line 679 "mime-lookup.gperf"
+      {"sv4cpio", "application/x-sv4cpio"},
+#line 838 "mime-lookup.gperf"
+      {"rgb", "image/x-rgb"},
+#line 29 "mime-lookup.gperf"
+      {"stk", "application/hyperstudio"},
+#line 110 "mime-lookup.gperf"
+      {"gbr", "application/rpki-ghostbusters"},
+#line 503 "mime-lookup.gperf"
+      {"sxw", "application/vnd.sun.xml.writer"},
+#line 236 "mime-lookup.gperf"
+      {"frame", "application/vnd.framemaker"},
+#line 26 "mime-lookup.gperf"
+      {"gml", "application/gml+xml"},
+#line 413 "mime-lookup.gperf"
+      {"odb", "application/vnd.oasis.opendocument.database"},
+#line 791 "mime-lookup.gperf"
+      {"jpe", "image/jpeg"},
+#line 564 "mime-lookup.gperf"
+      {"dmg", "application/x-apple-diskimage"},
+#line 892 "mime-lookup.gperf"
+      {"uris", "text/uri-list"},
+#line 217 "mime-lookup.gperf"
+      {"geo", "application/vnd.dynageo"},
+#line 623 "mime-lookup.gperf"
+      {"gramps", "application/x-gramps-xml"},
+#line 129 "mime-lookup.gperf"
+      {"gram", "application/srgs"},
+#line 689 "mime-lookup.gperf"
+      {"obj", "application/x-tgif"},
+#line 857 "mime-lookup.gperf"
+      {"vrml", "model/vrml"},
+#line 525 "mime-lookup.gperf"
+      {"umj", "application/vnd.umajin"},
+#line 829 "mime-lookup.gperf"
+      {"ico", "image/x-icon"},
+#line 544 "mime-lookup.gperf"
+      {"xfdl", "application/vnd.xfdl"},
+#line 518 "mime-lookup.gperf"
+      {"tmo", "application/vnd.tmobile-livetv"},
+#line 252 "mime-lookup.gperf"
+      {"ggb", "application/vnd.geogebra.file"},
+#line 622 "mime-lookup.gperf"
+      {"gnumeric", "application/x-gnumeric"},
+#line 410 "mime-lookup.gperf"
+      {"ext", "application/vnd.novadigm.ext"},
+#line 275 "mime-lookup.gperf"
+      {"hpgl", "application/vnd.hp-hpgl"},
+#line 856 "mime-lookup.gperf"
+      {"wrl", "model/vrml"},
+#line 802 "mime-lookup.gperf"
+      {"uvvi", "image/vnd.dece.graphic"},
+#line 143 "mime-lookup.gperf"
+      {"aso", "application/vnd.accpac.simply.aso"},
+#line 267 "mime-lookup.gperf"
+      {"grv", "application/vnd.groove-injector"},
+#line 419 "mime-lookup.gperf"
+      {"oti", "application/vnd.oasis.opendocument.image-template"},
+#line 803 "mime-lookup.gperf"
+      {"uvg", "image/vnd.dece.graphic"},
+#line 78 "mime-lookup.gperf"
+      {"onetoc2", "application/onenote"},
+#line 76 "mime-lookup.gperf"
+      {"omdoc", "application/omdoc+xml"},
+#line 457 "mime-lookup.gperf"
+      {"qxt", "application/vnd.quark.quarkxpress"},
+#line 591 "mime-lookup.gperf"
+      {"udeb", "application/x-debian-package"},
+#line 964 "mime-lookup.gperf"
+      {"mxu", "video/vnd.mpegurl"},
+#line 260 "mime-lookup.gperf"
+      {"kml", "application/vnd.google-earth.kml+xml"},
+#line 416 "mime-lookup.gperf"
+      {"odg", "application/vnd.oasis.opendocument.graphics"},
+#line 256 "mime-lookup.gperf"
+      {"gxt", "application/vnd.geonext"},
+#line 130 "mime-lookup.gperf"
+      {"grxml", "application/srgs+xml"},
+#line 261 "mime-lookup.gperf"
+      {"kmz", "application/vnd.google-earth.kmz"},
+#line 526 "mime-lookup.gperf"
+      {"unityweb", "application/vnd.unity"},
+#line 338 "mime-lookup.gperf"
+      {"portpkg", "application/vnd.macports.portpkg"},
+#line 790 "mime-lookup.gperf"
+      {"jpg", "image/jpeg"},
+#line 463 "mime-lookup.gperf"
+      {"mxl", "application/vnd.recordare.musicxml"},
+#line 944 "mime-lookup.gperf"
+      {"mpeg", "video/mpeg"},
+#line 718 "mime-lookup.gperf"
+      {"mxml", "application/xv+xml"},
+#line 31 "mime-lookup.gperf"
+      {"inkml", "application/inkml+xml"},
+#line 160 "mime-lookup.gperf"
+      {"apk", "application/vnd.android.package-archive"},
+#line 430 "mime-lookup.gperf"
+      {"oxt", "application/vnd.openofficeorg.extension"},
+#line 308 "mime-lookup.gperf"
+      {"ktr", "application/vnd.kahootz"},
+#line 81 "mime-lookup.gperf"
+      {"oxps", "application/oxps"},
+#line 456 "mime-lookup.gperf"
+      {"qxd", "application/vnd.quark.quarkxpress"},
+#line 333 "mime-lookup.gperf"
+      {"pre", "application/vnd.lotus-freelance"},
+#line 731 "mime-lookup.gperf"
+      {"rmi", "audio/midi"},
+#line 297 "mime-lookup.gperf"
+      {"qbo", "application/vnd.intu.qbo"},
+#line 394 "mime-lookup.gperf"
+      {"mseq", "application/vnd.mseq"},
+#line 170 "mime-lookup.gperf"
+      {"bmi", "application/vnd.bmi"},
+#line 314 "mime-lookup.gperf"
+      {"kpr", "application/vnd.kde.kpresenter"},
+#line 741 "mime-lookup.gperf"
+      {"ogg", "audio/ogg"},
+#line 624 "mime-lookup.gperf"
+      {"gtar", "application/x-gtar"},
+#line 804 "mime-lookup.gperf"
+      {"uvvg", "image/vnd.dece.graphic"},
+#line 574 "mime-lookup.gperf"
+      {"blorb", "application/x-blorb"},
+#line 28 "mime-lookup.gperf"
+      {"gxf", "application/gxf"},
+#line 417 "mime-lookup.gperf"
+      {"otg", "application/vnd.oasis.opendocument.graphics-template"},
+#line 523 "mime-lookup.gperf"
+      {"ufdl", "application/vnd.ufdl"},
+#line 136 "mime-lookup.gperf"
+      {"tfi", "application/thraud+xml"},
+#line 151 "mime-lookup.gperf"
+      {"fxpl", "application/vnd.adobe.fxp"},
+#line 588 "mime-lookup.gperf"
+      {"cpio", "application/x-cpio"},
+#line 23 "mime-lookup.gperf"
+      {"epub", "application/epub+zip"},
+#line 723 "mime-lookup.gperf"
+      {"yin", "application/yin+xml"},
+#line 405 "mime-lookup.gperf"
+      {"n-gage", "application/vnd.nokia.n-gage.symbian.install"},
+#line 25 "mime-lookup.gperf"
+      {"pfr", "application/font-tdpfr"},
+#line 556 "mime-lookup.gperf"
+      {"vxml", "application/voicexml+xml"},
+#line 321 "mime-lookup.gperf"
+      {"kne", "application/vnd.kinar"},
+#line 188 "mime-lookup.gperf"
+      {"clkk", "application/vnd.crick.clicker.keyboard"},
+#line 615 "mime-lookup.gperf"
+      {"pfb", "application/x-font-type1"},
+#line 627 "mime-lookup.gperf"
+      {"iso", "application/x-iso9660-image"},
+#line 660 "mime-lookup.gperf"
+      {"wri", "application/x-mswrite"},
+#line 468 "mime-lookup.gperf"
+      {"rmvb", "application/vnd.rn-realmedia-vbr"},
+#line 636 "mime-lookup.gperf"
+      {"lnk", "application/x-ms-shortcut"},
+#line 164 "mime-lookup.gperf"
+      {"mpkg", "application/vnd.apple.installer+xml"},
+#line 448 "mime-lookup.gperf"
+      {"efif", "application/vnd.picsel"},
+#line 891 "mime-lookup.gperf"
+      {"uri", "text/uri-list"},
+#line 478 "mime-lookup.gperf"
+      {"ipk", "application/vnd.shana.informed.package"},
+#line 69 "mime-lookup.gperf"
+      {"bpk", "application/octet-stream"},
+#line 319 "mime-lookup.gperf"
+      {"htke", "application/vnd.kenameaapp"},
+#line 500 "mime-lookup.gperf"
+      {"sxi", "application/vnd.sun.xml.impress"},
+#line 549 "mime-lookup.gperf"
+      {"osfpvg", "application/vnd.yamaha.openscoreformat.osfpvg+xml"},
+#line 595 "mime-lookup.gperf"
+      {"dxr", "application/x-director"},
+#line 122 "mime-lookup.gperf"
+      {"setpay", "application/set-payment-initiation"},
+#line 350 "mime-lookup.gperf"
+      {"mqy", "application/vnd.mobius.mqy"},
+#line 900 "mime-lookup.gperf"
+      {"fly", "text/vnd.fly"},
+#line 30 "mime-lookup.gperf"
+      {"ink", "application/inkml+xml"},
+#line 37 "mime-lookup.gperf"
+      {"json", "application/json"},
+#line 789 "mime-lookup.gperf"
+      {"jpeg", "image/jpeg"},
+#line 504 "mime-lookup.gperf"
+      {"sxg", "application/vnd.sun.xml.writer.global"},
+#line 460 "mime-lookup.gperf"
+      {"qxl", "application/vnd.quark.quarkxpress"},
+#line 174 "mime-lookup.gperf"
+      {"cdy", "application/vnd.cinderella"},
+#line 255 "mime-lookup.gperf"
+      {"gre", "application/vnd.geometry-explorer"},
+#line 309 "mime-lookup.gperf"
+      {"karbon", "application/vnd.kde.karbon"},
+#line 341 "mime-lookup.gperf"
+      {"cdkey", "application/vnd.mediastation.cdkey"},
+#line 866 "mime-lookup.gperf"
+      {"ifb", "text/calendar"},
+#line 38 "mime-lookup.gperf"
+      {"jsonml", "application/jsonml+json"},
+#line 238 "mime-lookup.gperf"
+      {"book", "application/vnd.framemaker"},
+#line 282 "mime-lookup.gperf"
+      {"mpy", "application/vnd.ibm.minipay"},
+#line 722 "mime-lookup.gperf"
+      {"yang", "application/yang"},
+#line 72 "mime-lookup.gperf"
+      {"deploy", "application/octet-stream"},
+#line 80 "mime-lookup.gperf"
+      {"onepkg", "application/onenote"},
+#line 644 "mime-lookup.gperf"
+      {"exe", "application/x-msdownload"},
+#line 24 "mime-lookup.gperf"
+      {"exi", "application/exi"},
+#line 335 "mime-lookup.gperf"
+      {"org", "application/vnd.lotus-organizer"},
+#line 396 "mime-lookup.gperf"
+      {"msty", "application/vnd.muvee.style"},
+#line 922 "mime-lookup.gperf"
+      {"nfo", "text/x-nfo"},
+#line 656 "mime-lookup.gperf"
+      {"mny", "application/x-msmoney"},
+#line 461 "mime-lookup.gperf"
+      {"qxb", "application/vnd.quark.quarkxpress"},
+#line 560 "mime-lookup.gperf"
+      {"wspolicy", "application/wspolicy+xml"},
+#line 311 "mime-lookup.gperf"
+      {"kfo", "application/vnd.kde.kformula"},
+#line 607 "mime-lookup.gperf"
+      {"evy", "application/x-envoy"},
+#line 465 "mime-lookup.gperf"
+      {"cryptonote", "application/vnd.rig.cryptonote"}
+    };
+
+  static const short lookup[] =
+    {
+         -1,     0,    -1,    -1,     1,    -1,    -1,
+         -1,    -1,     2,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,     3,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,     4,    -1,    -1,    -1,
+         -1,    -1,     5,    -1,    -1,    -1,     6,
+          7,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,     8,     9,    10,    -1,    -1,    -1,
+         11,    -1,    12,    13,    -1,    -1,    14,
+         -1,    -1,    -1,    -1,    15,    -1,    -1,
+         -1,    16,    -1,    -1,    -1,    -1,    -1,
+         17,    -1,    18,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    19,    20,
+         -1,    21,    -1,    -1,    -1,    -1,    22,
+         -1,    23,    -1,    24,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    25,    26,    -1,    -1,
+         -1,    -1,    27,    28,    -1,    29,    -1,
+         -1,    -1,    -1,    -1,    -1,    30,    -1,
+         -1,    -1,    31,    32,    33,    -1,    -1,
+         -1,    -1,    34,    -1,    -1,    -1,    35,
+         -1,    -1,    36,    -1,    -1,    -1,    -1,
+         37,    38,    39,    -1,    -1,    40,    -1,
+         -1,    41,    -1,    -1,    42,    -1,    43,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    44,    -1,    -1,
+         -1,    -1,    -1,    -1,    45,    -1,    -1,
+         -1,    -1,    46,    47,    -1,    48,    49,
+         50,    -1,    -1,    51,    -1,    -1,    -1,
+         -1,    -1,    52,    -1,    53,    -1,    54,
+         -1,    -1,    -1,    -1,    -1,    55,    56,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         57,    -1,    58,    -1,    -1,    -1,    -1,
+         59,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    60,    -1,
+         -1,    61,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    62,    -1,    -1,    -1,
+         -1,    -1,    63,    -1,    -1,    -1,    64,
+         65,    -1,    -1,    66,    -1,    -1,    -1,
+         -1,    67,    68,    69,    -1,    -1,    70,
+         71,    -1,    -1,    -1,    72,    73,    74,
+         -1,    75,    -1,    -1,    -1,    -1,    -1,
+         -1,    76,    -1,    -1,    -1,    -1,    77,
+         -1,    -1,    -1,    78,    79,    -1,    -1,
+         -1,    80,    -1,    81,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    82,    -1,    -1,
+         -1,    83,    -1,    -1,    -1,    -1,    -1,
+         84,    -1,    -1,    85,    -1,    86,    -1,
+         -1,    87,    -1,    88,    -1,    89,    90,
+         -1,    -1,    91,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    92,    93,    -1,    94,    -1,
+         95,    96,    97,    -1,    -1,    -1,    98,
+         -1,    -1,    -1,    -1,    -1,    99,    -1,
+         -1,   100,    -1,    -1,    -1,    -1,   101,
+         -1,    -1,    -1,    -1,   102,    -1,    -1,
+        103,    -1,    -1,   104,    -1,    -1,   105,
+        106,   107,    -1,    -1,    -1,    -1,    -1,
+        108,   109,    -1,   110,   111,    -1,    -1,
+        112,   113,    -1,    -1,    -1,    -1,   114,
+        115,    -1,    -1,    -1,    -1,   116,   117,
+         -1,    -1,    -1,    -1,    -1,   118,    -1,
+         -1,   119,   120,    -1,    -1,   121,   122,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,   123,   124,    -1,    -1,    -1,    -1,
+        125,   126,   127,    -1,    -1,   128,   129,
+        130,    -1,   131,   132,    -1,    -1,    -1,
+        133,   134,    -1,    -1,   135,   136,    -1,
+         -1,   137,    -1,   138,    -1,   139,   140,
+         -1,    -1,   141,    -1,    -1,    -1,   142,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,   143,   144,   145,   146,   147,    -1,
+        148,    -1,    -1,    -1,    -1,   149,   150,
+        151,   152,    -1,   153,   154,    -1,    -1,
+         -1,   155,    -1,    -1,   156,    -1,    -1,
+         -1,    -1,   157,    -1,   158,   159,   160,
+         -1,    -1,   161,    -1,    -1,    -1,    -1,
+        162,    -1,    -1,    -1,    -1,   163,    -1,
+        164,   165,    -1,   166,    -1,    -1,    -1,
+         -1,   167,    -1,   168,    -1,    -1,   169,
+        170,   171,    -1,    -1,   172,    -1,    -1,
+         -1,   173,   174,    -1,    -1,    -1,    -1,
+        175,    -1,   176,   177,    -1,   178,   179,
+         -1,    -1,   180,    -1,   181,    -1,    -1,
+        182,    -1,   183,    -1,    -1,    -1,   184,
+        185,   186,    -1,    -1,   187,    -1,   188,
+        189,    -1,   190,   191,   192,   193,   194,
+        195,   196,   197,   198,    -1,   199,    -1,
+        200,    -1,    -1,   201,    -1,   202,    -1,
+         -1,   203,   204,   205,    -1,    -1,   206,
+        207,    -1,    -1,    -1,   208,    -1,   209,
+         -1,    -1,   210,   211,   212,    -1,    -1,
+        213,    -1,   214,    -1,    -1,   215,    -1,
+         -1,    -1,    -1,   216,    -1,    -1,    -1,
+         -1,   217,    -1,   218,    -1,    -1,    -1,
+        219,    -1,    -1,    -1,   220,   221,    -1,
+         -1,    -1,   222,    -1,    -1,    -1,    -1,
+        223,   224,   225,    -1,    -1,   226,    -1,
+         -1,    -1,    -1,   227,   228,    -1,    -1,
+        229,   230,   231,   232,   233,   234,   235,
+         -1,    -1,   236,    -1,   237,   238,    -1,
+         -1,   239,   240,   241,   242,    -1,    -1,
+        243,    -1,   244,    -1,    -1,    -1,   245,
+         -1,    -1,    -1,   246,   247,    -1,    -1,
+         -1,   248,    -1,   249,    -1,    -1,    -1,
+        250,    -1,   251,    -1,   252,   253,    -1,
+         -1,    -1,   254,   255,    -1,    -1,   256,
+        257,    -1,    -1,    -1,    -1,    -1,   258,
+         -1,    -1,    -1,   259,    -1,    -1,   260,
+        261,    -1,   262,    -1,    -1,    -1,   263,
+         -1,   264,    -1,    -1,   265,    -1,   266,
+         -1,    -1,   267,    -1,   268,    -1,    -1,
+        269,   270,    -1,   271,    -1,   272,   273,
+        274,    -1,    -1,    -1,   275,    -1,    -1,
+         -1,   276,   277,    -1,    -1,    -1,    -1,
+        278,   279,   280,    -1,    -1,    -1,    -1,
+        281,    -1,    -1,   282,   283,    -1,    -1,
+        284,   285,   286,   287,   288,   289,   290,
+         -1,    -1,    -1,    -1,   291,   292,    -1,
+         -1,   293,    -1,    -1,    -1,    -1,    -1,
+         -1,   294,    -1,    -1,   295,    -1,    -1,
+        296,    -1,   297,    -1,    -1,   298,   299,
+         -1,    -1,   300,    -1,    -1,   301,    -1,
+        302,    -1,    -1,   303,   304,   305,    -1,
+         -1,   306,   307,    -1,   308,   309,   310,
+        311,   312,    -1,    -1,   313,    -1,    -1,
+         -1,   314,   315,    -1,    -1,   316,    -1,
+        317,   318,    -1,    -1,    -1,   319,   320,
+        321,    -1,    -1,    -1,   322,   323,    -1,
+         -1,   324,   325,   326,    -1,    -1,   327,
+        328,    -1,   329,    -1,   330,   331,   332,
+         -1,    -1,   333,    -1,    -1,    -1,   334,
+        335,   336,    -1,    -1,    -1,   337,   338,
+        339,    -1,   340,   341,   342,   343,    -1,
+         -1,    -1,    -1,    -1,   344,    -1,   345,
+         -1,    -1,   346,   347,    -1,    -1,   348,
+         -1,    -1,   349,    -1,   350,   351,    -1,
+        352,    -1,   353,    -1,    -1,   354,    -1,
+         -1,    -1,    -1,   355,   356,    -1,    -1,
+        357,    -1,   358,    -1,   359,   360,   361,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,   362,   363,    -1,   364,   365,
+         -1,    -1,    -1,    -1,   366,    -1,   367,
+         -1,    -1,   368,   369,    -1,    -1,    -1,
+         -1,   370,   371,    -1,    -1,    -1,   372,
+        373,    -1,    -1,    -1,   374,   375,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,   376,    -1,    -1,    -1,   377,   378,
+         -1,   379,    -1,    -1,   380,   381,    -1,
+         -1,   382,   383,   384,    -1,   385,    -1,
+         -1,    -1,    -1,   386,    -1,   387,    -1,
+         -1,    -1,    -1,   388,   389,    -1,   390,
+        391,    -1,   392,    -1,    -1,   393,   394,
+         -1,    -1,    -1,    -1,    -1,   395,    -1,
+         -1,    -1,   396,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,   397,    -1,    -1,
+        398,    -1,   399,   400,   401,    -1,    -1,
+        402,   403,    -1,    -1,    -1,   404,   405,
+         -1,   406,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,   407,    -1,    -1,    -1,    -1,
+        408,   409,    -1,    -1,   410,   411,    -1,
+        412,    -1,   413,   414,   415,    -1,    -1,
+        416,    -1,   417,    -1,    -1,   418,    -1,
+        419,    -1,    -1,    -1,    -1,   420,    -1,
+         -1,   421,    -1,    -1,    -1,    -1,    -1,
+        422,    -1,    -1,    -1,   423,   424,   425,
+         -1,    -1,   426,   427,   428,    -1,   429,
+        430,   431,    -1,   432,    -1,   433,   434,
+        435,   436,    -1,    -1,   437,    -1,    -1,
+        438,    -1,   439,    -1,    -1,    -1,   440,
+         -1,   441,    -1,    -1,   442,    -1,    -1,
+         -1,    -1,   443,    -1,   444,    -1,   445,
+         -1,   446,    -1,    -1,    -1,    -1,   447,
+         -1,    -1,    -1,    -1,    -1,   448,    -1,
+         -1,   449,    -1,    -1,    -1,    -1,    -1,
+        450,    -1,    -1,    -1,    -1,   451,    -1,
+         -1,    -1,    -1,   452,    -1,   453,    -1,
+        454,   455,    -1,    -1,    -1,    -1,    -1,
+        456,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,   457,    -1,   458,    -1,    -1,   459,
+         -1,   460,    -1,   461,    -1,   462,   463,
+        464,    -1,   465,   466,    -1,   467,    -1,
+        468,    -1,   469,    -1,   470,   471,    -1,
+         -1,   472,    -1,    -1,   473,    -1,   474,
+         -1,    -1,   475,    -1,    -1,    -1,   476,
+         -1,   477,   478,   479,   480,    -1,    -1,
+         -1,    -1,   481,   482,    -1,    -1,    -1,
+         -1,    -1,    -1,   483,    -1,    -1,    -1,
+         -1,   484,   485,    -1,   486,   487,    -1,
+         -1,    -1,    -1,   488,    -1,   489,    -1,
+         -1,    -1,   490,    -1,   491,    -1,   492,
+         -1,   493,   494,   495,    -1,    -1,   496,
+        497,    -1,   498,   499,    -1,   500,    -1,
+        501,   502,    -1,    -1,    -1,   503,   504,
+         -1,   505,    -1,   506,    -1,    -1,   507,
+        508,    -1,   509,    -1,   510,    -1,   511,
+         -1,   512,   513,   514,    -1,   515,    -1,
+        516,   517,    -1,    -1,    -1,   518,   519,
+         -1,    -1,    -1,   520,    -1,    -1, -2397,
+         -1,   523,    -1,   524,  -464,    -2,   525,
+        526,   527,    -1,    -1,   528,   529,    -1,
+         -1,    -1,   530,   531,   532,    -1,    -1,
+        533,    -1,    -1,    -1,   534,   535,   536,
+         -1,    -1,   537,   538,   539,   540,   541,
+         -1,   542,   543,    -1,    -1,    -1,   544,
+        545,   546,   547,    -1,   548,    -1,   549,
+        550,    -1,   551,   552,    -1,   553,    -1,
+        554,   555,   556,    -1,    -1,   557,    -1,
+         -1,   558,   559,   560,   561,   562,   563,
+         -1,    -1,   564,   565,    -1,    -1,   566,
+        567,    -1,    -1,    -1,   568,    -1,    -1,
+         -1,   569,   570,    -1,    -1,   571,    -1,
+         -1,    -1,   572,    -1,   573,   574,   575,
+        576,    -1,    -1,    -1,   577,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,   578,   579,
+         -1,    -1,   580,    -1,    -1,    -1,   581,
+         -1,   582,    -1,    -1,    -1,   583,    -1,
+         -1,   584,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,   585,    -1,   586,    -1,   587,
+        588,   589,    -1,    -1,    -1,    -1,    -1,
+         -1,   590,    -1,   591,    -1,   592,    -1,
+        593,    -1,    -1,    -1,   594,    -1,   595,
+        596,    -1,   597,    -1,    -1,   598,    -1,
+         -1,    -1,   599,   600,   601,    -1,   602,
+         -1,    -1,    -1,   603,    -1,   604,    -1,
+        605,    -1,    -1,   606,   607,   608,    -1,
+         -1,   609,   610,   611,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,   612,    -1,    -1,
+        613,   614,   615,   616,   617,   618,   619,
+         -1,    -1,   620,    -1,    -1,    -1,    -1,
+         -1,   621,    -1,    -1,   622,   623,    -1,
+        624,    -1,    -1,   625,   626,    -1,    -1,
+         -1,   627,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,   628,    -1,    -1,    -1,
+        629,   630,    -1,    -1,    -1,    -1,   631,
+         -1,    -1,    -1,   632,    -1,    -1,   633,
+        634,   635,   636,   637,    -1,   638,    -1,
+        639,    -1,   640,   641,   642,   643,   644,
+        645,    -1,    -1,   646,    -1,    -1,    -1,
+        647,    -1,    -1,    -1,   648,   649,    -1,
+         -1,    -1,    -1,   650,    -1,   651,    -1,
+         -1,    -1,   652,   653,    -1,   654,    -1,
+         -1,    -1,   655,    -1,   656,   657,    -1,
+         -1,    -1,   658,    -1,    -1,   659,    -1,
+        660,    -1,   661,    -1,    -1,    -1,    -1,
+        662,    -1,   663,    -1,    -1,   664,   665,
+        666,    -1,    -1,    -1,   667,   668,    -1,
+        669,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,   670,    -1,   671,    -1,
+         -1,    -1,    -1,   672,   673,   674,   675,
+        676,   677,    -1,    -1,    -1,   678,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,   679,   680,   681,    -1,   682,   683,
+         -1,    -1,   684,    -1,    -1,    -1,   685,
+        686,    -1,   687,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,   688,    -1,   689,
+         -1,   690,    -1,   691,   692,   693,    -1,
+        694,    -1,    -1,   695,    -1,   696,    -1,
+        697,   698,    -1,   699,    -1,    -1,   700,
+         -1,   701,    -1,   702,    -1,   703,   704,
+        705,    -1,    -1,    -1,   706,    -1,   707,
+         -1,   708,    -1,   709,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,   710,    -1,    -1,
+         -1,    -1,    -1,   711,    -1,    -1,    -1,
+         -1,   712,    -1,    -1,    -1,    -1,    -1,
+        713,    -1,   714,    -1,    -1,   715,   716,
+         -1,   717,   718,   719,    -1,    -1,   720,
+         -1,    -1,   721,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+        722,    -1,    -1,    -1,    -1,    -1,   723,
+        724,   725,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,   726,    -1,    -1,    -1,    -1,
+         -1,    -1,   727,   728,    -1,    -1,    -1,
+        729,    -1,   730,    -1,   731,    -1,    -1,
+         -1,   732,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,   733,    -1,   734,    -1,    -1,   735,
+         -1,    -1,    -1,    -1,   736,    -1,    -1,
+        737,    -1,   738,   739,    -1,    -1,   740,
+        741,    -1,   742,    -1,    -1,    -1,   743,
+         -1,    -1,    -1,   744,    -1,   745,    -1,
+         -1,   746,    -1,    -1,    -1,    -1,    -1,
+         -1,   747,    -1,    -1,    -1,   748,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,   749,
+         -1,    -1,    -1,   750,    -1,    -1,   751,
+         -1,    -1,    -1,    -1,    -1,   752,   753,
+        754,   755,    -1,   756,    -1,    -1,    -1,
+         -1,    -1,    -1,   757,    -1,    -1,    -1,
+         -1,   758,    -1,   759,    -1,   760,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+        761,    -1,   762,   763,    -1,    -1,   764,
+        765,    -1,    -1,    -1,    -1,   766,    -1,
+        767,    -1,    -1,    -1,   768,   769,   770,
+         -1,   771,    -1,    -1,    -1,    -1,    -1,
+        772,   773,   774,   775,    -1,   776,    -1,
+         -1,    -1,    -1,   777,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,   778,    -1,    -1,   779,    -1,    -1,
+         -1,    -1,    -1,    -1,   780,    -1,    -1,
+      -3094,  -204,    -2,    -1,    -1,   783,    -1,
+         -1,    -1,   784,    -1,   785,    -1,    -1,
+         -1,    -1,   786,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,   787,    -1,    -1,
+         -1,    -1,   788,    -1,   789,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,   790,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+        791,    -1,    -1,    -1,    -1,    -1,   792,
+        793,    -1,   794,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+        795,    -1,   796,    -1,    -1,    -1,    -1,
+         -1,    -1,   797,    -1,    -1,    -1,   798,
+         -1,   799,    -1,    -1,    -1,    -1,   800,
+         -1,    -1,    -1,   801,   802,    -1,   803,
+         -1,   804,   805,    -1,    -1,   806,   807,
+         -1,   808,    -1,    -1,   809,    -1,    -1,
+        810,    -1,   811,    -1,    -1,    -1,    -1,
+        812,   813,    -1,    -1,   814,   815,    -1,
+        816,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,   817,    -1,   818,    -1,   819,    -1,
+         -1,    -1,   820,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,   821,    -1,   822,
+         -1,    -1,    -1,    -1,   823,    -1,    -1,
+         -1,   824,    -1,    -1,   825,    -1,    -1,
+        826,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,   827,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,   828,
+         -1,   829,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,   830,    -1,    -1,   831,    -1,
+         -1,    -1,    -1,   832,    -1,    -1,    -1,
+         -1,    -1,    -1,   833,    -1,    -1,   834,
+         -1,    -1,   835,    -1,    -1,    -1,    -1,
+         -1,    -1,   836,    -1,    -1,    -1,    -1,
+        837,   838,    -1,   839,    -1,    -1,    -1,
+        840,    -1,   841,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,   842,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,   843,    -1,    -1,
+         -1,   844,    -1,   845,    -1,    -1,    -1,
+         -1,    -1,    -1,   846,    -1,   847,   848,
+         -1,    -1,    -1,   849,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+        850,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,   851,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,   852,
+         -1,   853,   854,    -1,    -1,    -1,   855,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,   856,    -1,    -1,    -1,   857,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+        858,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,   859,    -1,    -1,    -1,    -1,    -1,
+         -1,   860,   861,    -1,    -1,    -1,    -1,
+         -1,   862,    -1,    -1,    -1,    -1,    -1,
+         -1,   863,    -1,    -1,    -1,    -1,    -1,
+         -1,   864,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,   865,    -1,   866,    -1,    -1,
+         -1,   867,   868,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,   869,    -1,   870,    -1,    -1,    -1,
+        871,    -1,    -1,   872,   873,   874,    -1,
+         -1,    -1,   875,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,   876,    -1,    -1,
+         -1,    -1,   877,    -1,    -1,   878,    -1,
+         -1,   879,    -1,    -1,    -1,    -1,    -1,
+        880,    -1,   881,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,   882,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,   883,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+        884,    -1,    -1,    -1,    -1,   885,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,   886,    -1,    -1,    -1,   887,   888,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,   889,    -1,
+         -1,    -1,   890,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,   891,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,   892,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,   893,
+        894,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,   895,    -1,    -1,
+        896,    -1,    -1,    -1,    -1,   897,    -1,
+         -1,    -1,    -1,    -1,    -1,   898,   899,
+        900,    -1,    -1,    -1,    -1,    -1,   901,
+         -1,    -1,    -1,    -1,   902,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,   903,    -1,   904,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,   905,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,   906,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+        907,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,   908,    -1,    -1,    -1,    -1,
+         -1,   909,    -1,    -1,    -1,    -1,   910,
+        911,   912,    -1,    -1,    -1,   913,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+        914,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+        915,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,   916,    -1,
+         -1,    -1,   917,    -1,    -1,    -1,    -1,
+         -1,    -1,   918,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,   919,    -1,    -1,
+         -1,    -1,    -1,   920,    -1,    -1,    -1,
+         -1,    -1,   921,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,   922,   923,    -1,
+        924,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,   925,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,   926,   927,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,   928,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,   929,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,   930,    -1,    -1,
+        931,   932,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,   933,
+         -1,    -1,    -1,   934,    -1,    -1,    -1,
+        935,    -1,    -1,    -1,    -1,   936,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,   937,   938,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,   939,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,   940,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,   941,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,   942,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,   943,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,   944,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,   945,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,   946,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,   947,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,   948,
+         -1,    -1,    -1,   949,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,   950,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,   951,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,   952,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,   953,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,   954,    -1,   955,    -1,
+        956,    -1,    -1,    -1,    -1,    -1,    -1,
+        957,    -1,    -1,    -1,    -1,    -1,   958,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,   959,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,   960,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+        961,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,   962,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,   963,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,   964,    -1,    -1,
+        965,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+        966,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,   967,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+        968,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+        969,    -1,    -1,    -1,    -1,   970,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,   971,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,   972,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,   973,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,   974,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,   975,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+        976,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,   977,    -1,   978,    -1,    -1,
+         -1,   979,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,   980,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,   981,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,   982,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+        983,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,    -1,    -1,    -1,    -1,
+         -1,    -1,    -1,   984
+    };
+
+  if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
+    {
+      register unsigned int key = hash (str, len);
+
+      if (key <= MAX_HASH_VALUE)
+        {
+          register int index = lookup[key];
+
+          if (index >= 0)
+            {
+              register const char *s = wordlist[index].name;
+
+              if (*str == *s && !strcmp (str + 1, s + 1))
+                return &wordlist[index];
+            }
+          else if (index < -TOTAL_KEYWORDS)
+            {
+              register int offset = - 1 - TOTAL_KEYWORDS - index;
+              register const struct file *wordptr = &wordlist[TOTAL_KEYWORDS + lookup[offset]];
+              register const struct file *wordendptr = wordptr + -lookup[offset + 1];
+
+              while (wordptr < wordendptr)
+                {
+                  register const char *s = wordptr->name;
+
+                  if (*str == *s && !strcmp (str + 1, s + 1))
+                    return wordptr;
+                  wordptr++;
+                }
+            }
+        }
+    }
+  return 0;
+}
+#line 990 "mime-lookup.gperf"
+
